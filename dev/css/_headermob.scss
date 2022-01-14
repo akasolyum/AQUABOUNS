@@ -1,0 +1,75 @@
+@media screen and (max-width: 1125px) {
+  body {
+    header {
+      display: flex;
+      align-items: center;
+      h1 {
+        display: flex;
+        align-self: center;
+        margin: 0;
+        a {
+          background: url(/img/logo_header_cond.svg) no-repeat;
+          background-size: 25%;
+          display: block;
+          margin-top: 10%;
+          width: 140px * 1.3;
+          height: 50px * 1.3;
+          text-indent: -9999px;
+          overflow: hidden;
+          text-decoration: none;
+        }
+      }
+      .desktop {
+        ul {
+          display: none; /*LE menu standard disparait*/
+        }
+      }
+      .mobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        .hamburger {
+          display: flex;
+          z-index: 100;
+          padding: 4px;
+          border: none;
+          color: white;
+          background: none;
+          cursor: pointer;
+        }
+        .closeIcon {
+          display: none;
+          font-size: 35px;
+        }
+        .menuIcon {
+          font-size: 35px;
+        }
+        .menu {
+          position: fixed;
+          transform: translateY(-150%);
+          transition: transform 0.2s;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 99;
+          background: $color_fond_claire;
+          color: white;
+          list-style: none;
+          padding-top: 4rem;
+          & .menuItemactive {
+            color: $color_active;
+          }
+          li {
+            font-size: 1.5em;
+            margin-top: 3%;
+          }
+        }
+        .showMenu {
+          transform: translateY(0);
+          margin: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@media screen and (max-width: 1125px) {
+  body {
+    .home {
+      section {
+        article {
+          text-align: center;
+        }
+        //DOWNLOAD
+        &:nth-child(2) {
+          div {
+            align-items: center;
+            article {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 100%;
+            }
+          }
+        }
+        //REJOINDRE
+        &:nth-child(3) {
+          background-color: $color_fond_claire;
+          > div {
+            div {
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
