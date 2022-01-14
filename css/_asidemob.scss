@@ -1,0 +1,14 @@
+@media screen and (max-width: 1125px) {
+  body {
+    .reseaux {
+      display: none;
+      & aside {
+        display: none;
+        a {
+          &:hover {
+          }
+        }
+      }
+    }
+  }
+}

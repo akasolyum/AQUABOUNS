@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACE,IADE,CACF,QAAQ,CAAC,EACP,OAAO,EAAE,IAAI,GAQd;;AAVH,AAGI,IAHA,CACF,QAAQ,CAEJ,KAAK,CAAC,EACN,OAAO,EAAE,IAAI,GAKd",
+    "sources": [
+        "asidemob.scss"
+    ],
+    "names": [],
+    "file": "asidemob.css"
+}

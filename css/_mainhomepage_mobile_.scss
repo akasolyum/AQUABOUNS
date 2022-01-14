@@ -1,0 +1,70 @@
+@media screen and (max-width: 1125px) {
+  body {
+    main {
+      section {
+        article {
+          text-align: center;
+        }
+        h2 {
+        }
+        p {
+        }
+        //INTRO
+        &:nth-child(1) {
+          article {
+          }
+          h2 {
+          }
+          p {
+          }
+        }
+
+        //DOWNLOAD
+        &:nth-child(2) {
+          div {
+            align-items: center;
+
+            article {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 100%;
+              h2 {
+              }
+              p {
+              }
+            }
+            div {
+              a {
+                &:hover {
+                }
+              }
+            }
+          }
+        }
+        //REJOINDRE
+        &:nth-child(3) {
+          background-color: $color_fond_claire;
+          > div {
+            article {
+              h2 {
+              }
+              p {
+              }
+            }
+            div {
+              justify-content: center;
+
+              > a {
+                &:nth-child(1) {
+                  &:hover {
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

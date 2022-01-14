@@ -1,0 +1,59 @@
+@media screen and (max-width: 1125px) {
+  body {
+    footer {
+      display: flex;
+      background-color: $color_fond;
+      width: 100%;
+      height: auto;
+      justify-content: center;
+      padding-left: 5%;
+      padding-right: 5%;
+
+      div {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100%;
+        max-width: $max_with;
+
+        section {
+          display: flex;
+          margin-top: 0em;
+          margin-bottom: 2em;
+          justify-content: center;
+          order: 1;
+          gap: 10vh;
+          .non_indispensable {
+            padding: 0;
+          }
+          .indispensable {
+            padding: 0;
+            > li {
+              margin-top: 5%;
+              a {
+                color: $color_incative;
+              }
+            }
+          }
+        }
+        h1 {
+          a {
+            background: url(/img/logo_header_cond.svg) no-repeat;
+            background-size: 25%;
+            display: block;
+            width: 140px * 1.3;
+            height: 37px * 1.3;
+            text-indent: -9999px;
+            overflow: hidden;
+            text-decoration: none;
+            order: 1;
+          }
+        }
+        p {
+          order: 2;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
