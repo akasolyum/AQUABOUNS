@@ -1,5 +1,5 @@
 <?php
-include_once "valide.html";
+
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -18,7 +18,7 @@ require 'PHPMailer/src/SMTP.php';
         $mail->SMTPDebug = 0;
 
         $mail->isSMTP(); 
-        $mail->Host = 'smtp.aquabouns.fr';
+        $mail->Host = 'smtp.aquabouns.f';
         $mail->SMTPAuth = true;
         $mail->Username = $myAwardSpaceEmail;
         $mail->Password = $myAwardSpaceEmailPassword;
@@ -35,7 +35,7 @@ require 'PHPMailer/src/SMTP.php';
 
         try {
             $mail->send();
-            echo 'Your message was sent successfully!';
+            include_once "valide.html";
         } catch (Exception $e) {
             echo "Your message could not be sent! PHPMailer Error: {$mail->ErrorInfo}";
         }
