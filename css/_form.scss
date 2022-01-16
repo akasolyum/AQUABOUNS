@@ -5,7 +5,9 @@ body {
     align-content: center;
     justify-content: center;
     grid-template-columns: 2fr;
-
+    .required {
+      color: #e21f4e;
+    }
     form {
       color: $color_fond;
       background: transparent;
@@ -31,7 +33,7 @@ body {
         font-size: 1em;
         width: 10rem;
         align-self: end;
-        color: $color_main_texte;
+        color: white;
         background: $color_cta;
       }
       .formcontact {
@@ -52,6 +54,7 @@ body {
           border-style: none;
           height: 3rem;
           width: 16rem;
+          color: $color_fond;
           padding: 0.5rem;
           background-color: transparent;
           border: 2px solid $color_sec_texte;

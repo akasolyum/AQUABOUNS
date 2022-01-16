@@ -18,14 +18,14 @@ require 'PHPMailer/src/SMTP.php';
         $mail->SMTPDebug = 0;
 
         $mail->isSMTP(); 
-        $mail->Host = 'smtp.aquabouns.f';
+        $mail->Host = 'smtp.aquabouns.fr';
         $mail->SMTPAuth = true;
         $mail->Username = $myAwardSpaceEmail;
         $mail->Password = $myAwardSpaceEmailPassword;
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port = 465;
 
-        $mail->setFrom($myAwardSpaceEmail, $_POST['f_name'], $_POST['name']);
+        $mail->setFrom($myAwardSpaceEmail, $_POST['email']);
         $mail->addAddress($myPersonalEmail);
         $mail->addReplyTo($_POST['email'], $_POST['name']);
 
