@@ -1,4 +1,5 @@
 <?php
+include_once "valide.html";
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
