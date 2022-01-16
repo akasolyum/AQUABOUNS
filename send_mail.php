@@ -24,7 +24,7 @@ require 'PHPMailer/src/SMTP.php';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port = 465;
 
-        $mail->setFrom($myAwardSpaceEmail, 'Nous');
+        $mail->setFrom($myAwardSpaceEmail, $_POST['f_name'], $_POST['name']);
         $mail->addAddress($myPersonalEmail);
         $mail->addReplyTo($_POST['email'], $_POST['name']);
 

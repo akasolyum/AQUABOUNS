@@ -36,7 +36,7 @@
 <!-- HUMBURGER -->
       <nav class="mobile">
         <ul class="menu">
-          <li><a class="menuItemactive" href="index.html">Accueil</a></li>
+          <li><a class="menuItem" href="index.html">Accueil</a></li>
           <li><a class="menuItem" href="fonctions.html">Fonctions</a></li>
           <li><a class="menuItem" href="https://pcbouns.yolasite.com/" target="_blank">Boutique</a></li>
           <li><a class="menuItem" href="#">Materiels compatibles</a></li>
@@ -50,27 +50,39 @@
         </button>
       </header>
 <!-- CONTENUS -->
+<main class="contact">
   <form method="POST" action="send_mail.php">
-      Subject:
-      <input type="text" name="subject" size="20">
-      <br/>
-      <br/>
-      Name:
-      <input type="text" name="name" size="20">
-      <br/>
-      <br/>
-      E-mail:
-      <input type="email" name="email" size="20">
-      <br/>
-      <br/>
-      Message:
-      <br/>
-      <textarea rows="9" name="message" cols="30">
-      </textarea>
-      <br/>
-      <br/>
-      <input type="submit" value="Send" name="submit">
+      <div class="formcontact f_name">
+        <label for="f_name">Prénom</label>
+        <input type="text" name="f_name" size="20">
+      </div>
+      <div class="formcontact name">
+        <label for="name">Nom</label>
+        <input   type="text" name="name" size="20">
+      </div>
+      <div class="formcontact email">
+        <label for="email">Votre Email</label>
+        <input placeholder="example@example.com" type="email" name="email" size="20">
+      </div >
+      <div class="formcontact subject">
+      <label for="subject">Sélectionnez la catégorie</label>
+      <select  name="subject">
+        <option value="Information">Information</option>
+        <option value="PCbouns">PCbouns</option>
+        <option value="Suggestions">Suggestions</option>
+        <option value="Rapports de bugs">Rapports de bugs</option>
+        <option value="SAV">SAV</option>
+        <option value="Divers">Divers</option>
+      </select>
+      </div>
+    </div>
+      <div class="formcontact message">
+        <label for="message">Votre Message</label>
+        <textarea  rows="9" name="message" ></textarea>
+      </div>
+      <input type="submit" value="Envoyer" name="submit">
   </form>
+</main>
 
 <!-- ASIDE -->
     <div class="reseaux">
