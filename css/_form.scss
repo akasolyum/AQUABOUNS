@@ -43,6 +43,10 @@ body {
         align-self: end;
         color: white;
         background: $color_cta;
+        &:hover {
+          transition: all 0.3s;
+          background: $color_active;
+        }
       }
       .formcontact {
         display: flex;

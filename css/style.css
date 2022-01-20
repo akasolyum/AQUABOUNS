@@ -141,7 +141,7 @@ body .faq { padding: 0 0 5% 0; }
 
 body .faq h1 { color: #011235; text-align: center; padding: 35px 5%; }
 
-body .faq .container-faq { width: 80%; max-width: 900px; min-width: 300px; height: auto; margin: 10px auto 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; }
+body .faq .container-faq { width: 80%; max-width: 900px; min-width: 300px; height: 50vh; margin: 10px auto 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; }
 
 body .faq .container-faq .questions { width: 100%; height: auto; margin: 5px; }
 
@@ -238,6 +238,8 @@ body .contact form select { margin-top: 0.5rem; height: 3rem; border-radius: 0.5
 
 body .contact form input { -webkit-box-sizing: border-box; box-sizing: border-box; height: 3rem; border-radius: 5rem; border-style: none; font-size: 1em; width: 10rem; -ms-flex-item-align: end; -ms-grid-row-align: end; align-self: end; color: white; background: #2060c6; }
 
+body .contact form input:hover { -webkit-transition: all 0.3s; transition: all 0.3s; background: #7eb3ff; }
+
 body .contact form .formcontact { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
 
 body .contact form .formcontact select { outline-style: none; }
@@ -272,7 +274,8 @@ body .contact form .formcontact.message textarea:focus { border: 3px solid #7eb3
 
 body .contact form .formcontact label { -webkit-box-ordinal-group: 0; -ms-flex-order: -1; order: -1; }
 
-@media screen and (max-width: 1125px) { body .contact { -webkit-box-sizing: border-box; box-sizing: border-box; display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; margin: 5rem; }
+@media screen and (max-width: 1125px) { body .contact { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-sizing: border-box; box-sizing: border-box; display: flex; width: 100%; margin: 5rem; }
+  body .contact h1 { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin-bottom: 8vh; color: #011235; text-align: center; }
   body .contact form { width: 100%; -webkit-box-sizing: border-box; box-sizing: border-box; gap: 2rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
   body .contact form input { margin-top: 3rem; -ms-flex-item-align: center; -ms-grid-row-align: center; align-self: center; }
   body .contact form .formcontact { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
