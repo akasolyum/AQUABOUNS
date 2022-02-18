@@ -11,13 +11,18 @@ function toggleMenu() {
     menu.classList.remove("showMenu");
     closeIcon.style.display = "none";
     menuIcon.style.display = "block";
+    window.onscroll = function () {
+      window.scrollTo(x, y);
+    };
   } else {
     menu.classList.add("showMenu");
     closeIcon.style.display = "block";
     menuIcon.style.display = "none";
+    window.onscroll = function () {
+      window.scrollTo(0, 0);
+    };
   }
 }
-
 hamburger.addEventListener("click", toggleMenu);
 
 //             FAQ
