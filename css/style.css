@@ -26,7 +26,7 @@ body a { text-decoration: none; color: #fff; }
 
 body .home { display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
 
-body .home section { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; height: 400px; width: 100%; }
+body .home section { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; height: 20rem; width: 100%; }
 
 body .home section article { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; max-width: 1140px; width: 100%; }
 
@@ -174,70 +174,6 @@ body .reseaux aside a:hover { -webkit-transition: 0.2s; transition: 0.2s; color:
 @media screen and (max-width: 1125px) { body .reseaux { display: none; }
   body .reseaux aside { display: none; } }
 
-body { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
-
-body .fonctions { display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
-
-body .fonctions > h1 { margin: 5% 0; text-align: center; }
-
-body .fonctions .intro { background: url(/img/cover_fonction.jpg) no-repeat; background-size: cover; height: 400px; }
-
-body .fonctions .intro article { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; }
-
-body .fonctions h1 { color: #fff; font-size: 1.5em; }
-
-body .fonctions p { color: #fff; font-size: 1em; }
-
-body .fonctions section { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; height: 20%; color: white; width: 100%; background-color: #011235; }
-
-body .fonctions section:nth-child(odd) { background-color: #f0f0f0; color: #011235; }
-
-body .fonctions section article { display: -webkit-box; display: -ms-flexbox; display: flex; max-width: 1140px; width: 100%; margin: 2%; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
-
-body .fonctions section article .picto { width: 100px; }
-
-body .fonctions section article ul { padding: 0; margin: 0; }
-
-body .fonctions section article ul li { line-height: 1.5; }
-
-body .fonctions section article .container-list { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 800px; }
-
-body .fonctions section article .container-list h4 { margin-top: 0; margin-bottom: 3%; }
-
-body .fonctions section article .container-list .listduo { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
-
-body .fonctions section article .container-list .listduo > ul { margin-left: 5%; width: 40%; }
-
-body .fonctions section article .container-list .list { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: start; width: 60%; }
-
-body .fonctions section article .container-list .list > ul { margin-left: 5%; }
-
-body .box { border: none; background-color: transparent; width: 220px; height: 300px; -webkit-perspective: 1000px; perspective: 1000px; }
-
-body .box-inner { position: relative; border: none; width: 100%; height: 100%; text-align: center; -webkit-transition: -webkit-transform 0.5s; transition: -webkit-transform 0.5s; transition: transform 0.5s; transition: transform 0.5s, -webkit-transform 0.5s; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; }
-
-body .box:hover .box-inner { border: none; -webkit-transform: rotateY(180deg); transform: rotateY(180deg); }
-
-body .box-front, body .box-back { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; }
-
-body .box-front { background-color: #cccccc; color: #111111; }
-
-body .box-back { background-color: #8ebf42; color: #eeeeee; -webkit-transform: rotateY(180deg); transform: rotateY(180deg); }
-
-@media screen and (max-width: 1125px) { body .fonctions .intro { height: 300px; }
-  body .fonctions .intro article { -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
-  body .fonctions p { text-align: center; }
-  body .fonctions section article { display: -webkit-box; display: -ms-flexbox; display: flex; max-width: 1140px; width: 100%; margin: 2%; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
-  body .fonctions section article .picto { -webkit-box-sizing: content-box; box-sizing: content-box; margin: 5%; }
-  body .fonctions section article ul { padding: 0; margin: 0; }
-  body .fonctions section article ul li { line-height: 1.5; }
-  body .fonctions section article .container-list { -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 100%; }
-  body .fonctions section article .container-list h4 { margin-top: 5%; margin-bottom: 5%; }
-  body .fonctions section article .container-list .listduo { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin: 10% 0; }
-  body .fonctions section article .container-list .listduo > ul { width: 60vw; }
-  body .fonctions section article .container-list .list { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
-  body .fonctions section article .container-list .list > ul { width: 60vw; margin: 10% 0; } }
-
 body .contact { display: -ms-grid; display: grid; margin: 5vh; -ms-flex-line-pack: center; align-content: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -ms-grid-columns: 2fr; grid-template-columns: 2fr; }
 
 body .contact h1 { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin-bottom: 8vh; color: #011235; text-align: center; }
@@ -332,4 +268,30 @@ body .valide .checkmark__check { -webkit-transform-origin: 80% 80%; transform-or
 @-webkit-keyframes fill { 100% { -webkit-box-shadow: inset 0px 0px 0px 60px #7ac142; box-shadow: inset 0px 0px 0px 60px #7ac142; } }
 
 @keyframes fill { 100% { -webkit-box-shadow: inset 0px 0px 0px 60px #7ac142; box-shadow: inset 0px 0px 0px 60px #7ac142; } }
+
+body .fonctions-new { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; width: 100%; }
+
+body .fonctions-new .intro { background: url(/img/cover_fonction.jpg) no-repeat; background-size: cover; background-position: 25% 25%; display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 20rem; }
+
+body .fonctions-new .intro article { max-width: 1140px; width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: start; -ms-flex-align: start; align-items: start; text-align: left; padding: 0 5rem 0 5rem; }
+
+body .fonctions-new .intro article h1 { -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; color: #fff; font-size: 1.5em; }
+
+body .fonctions-new .intro article p { color: #fff; font-size: 1em; }
+
+body .fonctions-new .container-list-fonctions { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -ms-flex-wrap: wrap; flex-wrap: wrap; max-width: 1140px; gap: 4.2rem; margin: 5rem 0 5rem 0; padding: 0 5rem 0 5rem; }
+
+body .fonctions-new .container-list-fonctions .container-features { width: 335px; position: relative; }
+
+body .fonctions-new .container-list-fonctions .container-features .summary-features { background-color: #011235; margin: 0; padding: 1rem; color: #fff; border-radius: 1rem; }
+
+body .fonctions-new .container-list-fonctions .container-features .summary-features br { display: block; /* makes it have a width */ content: " "; /* clears default height */ margin-top: -3px; /* change this to whatever height you want it */ }
+
+body .fonctions-new .container-list-fonctions .container-features .summary-features h2 { margin: 0; font-size: 1.2em; padding: 0rem 0rem 0rem 2.5rem; }
+
+body .fonctions-new .container-list-fonctions .container-features .summary-features p { margin: 1rem 0 0 0; line-height: 1.3 rem; }
+
+body .fonctions-new .container-list-fonctions .container-features .summary-features a { color: #6f82a6; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: end; margin-top: 1rem; }
+
+body .fonctions-new .container-list-fonctions .container-features .icon-features { width: 5rem; position: absolute; top: -1.3rem; left: -2.3rem; }
 /*# sourceMappingURL=style.css.map */

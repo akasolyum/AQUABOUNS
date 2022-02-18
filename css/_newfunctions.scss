@@ -1,0 +1,135 @@
+body {
+  .fonctions-new {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    .intro {
+      background: url(/img/cover_fonction.jpg) no-repeat;
+      background-size: cover;
+      background-position: 25% 25%;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      height: 20rem;
+      article {
+        max-width: $max_with;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        text-align: left;
+        padding: 0 5rem 0 5rem;
+        & h1 {
+          align-items: flex-start;
+          color: $color_main_texte;
+          font-size: 1.5em;
+        }
+        & p {
+          color: $color_main_texte;
+          font-size: 1em;
+        }
+      }
+    }
+    .container-list-fonctions {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: $max_with;
+      gap: 4.2rem;
+      margin: 5rem 0 5rem 0;
+      padding: 0 5rem 0 5rem;
+      .container-features {
+        width: 335px;
+        position: relative;
+        .summary-features {
+          background-color: $color_fond;
+          margin: 0;
+          padding: 1rem;
+          color: $color_main_texte;
+          border-radius: 1rem;
+          br {
+            display: block; /* makes it have a width */
+            content: " "; /* clears default height */
+            margin-top: -3px; /* change this to whatever height you want it */
+          }
+          h2 {
+            margin: 0;
+            font-size: 1.2em;
+            padding: 0rem 0rem 0rem 2.5rem;
+          }
+          p {
+            margin: 1rem 0 0 0;
+            line-height: 1.3 rem;
+          }
+          a {
+            color: $color_therd_texte;
+            display: flex;
+            justify-content: end;
+            margin-top: 1rem;
+            // display: none; //juste temporairement
+          }
+        }
+        .icon-features {
+          width: 5rem;
+          position: absolute;
+          top: -1.3rem;
+          left: -2.3rem;
+        }
+      }
+    }
+  }
+}
+
+// FLIP //
+//   .fonctions {
+//     box-sizing: border-box;
+//     margin: 2rem 1rem 2rem 1rem;
+//     display: flex;
+//     width: fit-content;
+//     max-width: $max_with;
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: row;
+//     gap: 2rem;
+//     flex-wrap: wrap;
+
+//     .box {
+//       background-color: transparent;
+//       width: 220px;
+//       height: 300px;
+//       perspective: 1000px;
+//     }
+//     .box-inner {
+//       position: relative;
+//       width: 100%;
+//       height: 100%;
+//       text-align: center;
+//       transition: transform 0.5s;
+//       transform-style: preserve-3d;
+//       &:hover .box-inner {
+//         transform: rotateY(180deg);
+//       }
+//       .box-front,
+//       .box-back {
+//         position: absolute;
+//         width: 100%;
+//         height: 100%;
+//         backface-visibility: hidden;
+//         border-radius: 0.5rem;
+//       }
+//       .box-front {
+//         background-color: #cccccc;
+//         color: #111111;
+//       }
+//       .box-back {
+//         background-color: #8ebf42;
+//         color: #eeeeee;
+//         transform: rotateY(180deg);
+//       }
+//     }
+//   }

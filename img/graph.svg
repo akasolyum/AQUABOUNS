@@ -1,1 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 48"><defs><style>.cls-1{fill:#2677ed;stroke:#2677ed;stroke-miterlimit:10;stroke-width:0.5px;}</style></defs><g id="Calque_7" data-name="Calque 7"><path class="cls-1" d="M2.07,47.06A1.13,1.13,0,0,1,1.71,47a1.08,1.08,0,0,1-.65-1.38L14.55,7.8a1.1,1.1,0,0,1,.95-.71,1.06,1.06,0,0,1,1,.59L27.4,29.17l1.42-12.54a1.07,1.07,0,0,1,.58-.84,1.1,1.1,0,0,1,1,0l10.34,6L46.9,1.77A1.07,1.07,0,1,1,49,2.39l-6.53,21.4a1.06,1.06,0,0,1-.63.68,1.11,1.11,0,0,1-.94-.07L30.77,18.51,29.13,33a1.06,1.06,0,0,1-.88.94,1.08,1.08,0,0,1-1.15-.57L15.74,10.88,3.09,46.35A1.09,1.09,0,0,1,2.07,47.06Z"/></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 50 48" style="enable-background:new 0 0 50 48;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#2677ED;stroke:#2677ED;stroke-width:0.4506;stroke-miterlimit:10;}
+</style>
+<g id="Calque_7">
+	<path class="st0" d="M6.7,42.5c-0.1,0-0.2,0-0.3-0.1c-0.5-0.2-0.8-0.7-0.6-1.2L18,7.1c0.1-0.4,0.5-0.6,0.9-0.6
+		c0.4,0,0.7,0.2,0.9,0.5l9.8,19.4l1.3-11.3c0-0.3,0.2-0.6,0.5-0.8c0.3-0.1,0.6-0.1,0.9,0l9.3,5.4l5.6-18c0.2-0.5,0.7-0.8,1.2-0.7
+		s0.8,0.7,0.7,1.2l-5.9,19.3c-0.1,0.3-0.3,0.5-0.6,0.6c-0.3,0.1-0.6,0.1-0.8-0.1l-9.1-5.3l-1.5,13.1c0,0.4-0.4,0.8-0.8,0.8
+		c-0.4,0.1-0.8-0.1-1-0.5L19,9.9l-11.4,32C7.5,42.3,7.1,42.5,6.7,42.5z"/>
+</g>
+</svg>
