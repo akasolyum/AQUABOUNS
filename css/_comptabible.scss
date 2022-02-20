@@ -1,0 +1,116 @@
+body {
+  .compatible {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .intro {
+      line-height: 1.5rem;
+      background: url(/img/cover_comaptibles.jpg) no-repeat;
+      background-position: 25% 25%;
+      background-size: cover;
+      height: 320px;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+    .container-compatible {
+      width: 100%;
+      max-width: $max_with;
+      min-width: 300px;
+      height: auto;
+      margin: 5rem auto 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      .categorie {
+        width: 100%;
+        height: auto;
+        margin: 5px;
+      }
+      .visible-pannel {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid $color_therd_texte;
+        position: relative;
+
+        h2 {
+          color: $color_fond;
+          margin: 0 0 0 10px;
+          padding: 15px 5px;
+          font-size: 1.5em;
+        }
+        img {
+          margin-right: 10px;
+          width: 40px;
+          cursor: pointer;
+        }
+      }
+      .toggle-pannel {
+        padding: 0px 15px;
+        height: 0px;
+        opacity: 0;
+        display: flex;
+        align-items: flex-start;
+        gap: 3rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        .brand-orphek {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          background-color: $color_fond;
+          width: auto;
+          padding: 2rem;
+          border-radius: 1rem;
+          img {
+            width: 9rem;
+          }
+        }
+        h3 {
+          color: white;
+          margin: 2rem 0 2rem 0;
+        }
+        svg {
+          width: 3rem;
+          height: 3rem;
+          stroke: white;
+          &:hover {
+            stroke: $color_active;
+            transition: all 0.2s;
+          }
+        }
+        .brand {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          background-color: $color_fond;
+          width: auto;
+          padding: 2rem 1rem 2rem 1rem;
+          border-radius: 1rem;
+          img {
+            width: 12rem;
+          }
+          h3 {
+            color: white;
+            margin: 4rem 0 2rem 0;
+          }
+          svg {
+            width: 3rem;
+            height: 3rem;
+            stroke: white;
+            &:hover {
+              stroke: $color_active;
+              transition: all 0.2s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
