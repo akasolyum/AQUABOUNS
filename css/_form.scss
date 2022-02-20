@@ -1,4 +1,7 @@
 body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   .contact {
     h1 {
       display: flex;
@@ -24,91 +27,105 @@ body {
       gap: 2rem;
       grid-template-columns: 1fr 1fr;
       position: relative;
-      & select {
+    }
+    & select {
+      margin-top: 0.5rem;
+      height: 3rem;
+      border-radius: 0.5rem;
+      width: 16rem;
+      text-align: center;
+      font-size: 1em;
+      border: 2px solid $color_sec_texte;
+    }
+    & input {
+      box-sizing: border-box;
+      height: 3rem;
+      border-radius: 5rem;
+      border-style: none;
+      font-size: 1em;
+      width: 10rem;
+      align-self: end;
+      justify-self: end;
+      color: white;
+      background: $color_cta;
+      &:hover {
+        transition: all 0.3s;
+        background: $color_active;
+      }
+    }
+    .formcontact {
+      display: flex;
+      flex-direction: column;
+      select {
+        outline-style: none;
+        &:focus {
+          border: 3px solid $color_active;
+        }
+      }
+      input {
+        transition: all 0.3s;
+        outline-style: none;
         margin-top: 0.5rem;
-        height: 3rem;
-        border-radius: 0.5rem;
-        width: 16rem;
-        text-align: center;
-        font-size: 1em;
-        border: 2px solid $color_sec_texte;
-      }
-      & input {
-        box-sizing: border-box;
-        height: 3rem;
         border-radius: 5rem;
-        border-style: none;
-        font-size: 1em;
-        width: 10rem;
-        align-self: end;
-        color: white;
-        background: $color_cta;
-        &:hover {
-          transition: all 0.3s;
-          background: $color_active;
+        height: 3rem;
+        width: 16rem;
+        color: $color_fond;
+        padding: 0.5rem;
+        background-color: transparent;
+        &::placeholder {
+          opacity: 0.3;
+        }
+        border: 2px solid $color_sec_texte;
+        &:focus {
+          border: 3px solid $color_active;
+        }
+        &:focus:valid {
+          color: green;
+        }
+        &:focus:invalid {
+          color: #e21f4e;
+        }
+        &:not(:focus):invalid:not(:required) {
+          border: 2px solid #e21f4e;
+          color: #e21f4e;
+        }
+        &:not(:placeholder-shown):invalid {
+          border: 2px solid #e21f4e;
+          color: #e21f4e;
         }
       }
-      .formcontact {
-        display: flex;
-        flex-direction: column;
-        select {
-          outline-style: none;
-          &:focus {
-            border: 3px solid $color_active;
-          }
-        }
-        input {
+      &.message {
+        grid-column: span 2;
+        textarea {
           transition: all 0.3s;
-          outline-style: none;
-          margin-top: 0.5rem;
-          border-radius: 5rem;
-          height: 3rem;
-          width: 16rem;
-          color: $color_fond;
           padding: 0.5rem;
-          background-color: transparent;
-          &::placeholder {
-            opacity: 0.3;
-          }
+          margin-top: 0.5rem;
+          border-radius: 0.5rem;
           border: 2px solid $color_sec_texte;
+          font-size: 1rem;
+          font-family: $main_font;
+          outline-style: none;
           &:focus {
             border: 3px solid $color_active;
           }
-          &:focus:valid {
-            color: green;
-          }
-          &:focus:invalid {
-            color: #e21f4e;
-          }
-          &:not(:focus):invalid:not(:required) {
-            border: 2px solid #e21f4e;
-            color: #e21f4e;
-          }
-          &:not(:placeholder-shown):invalid {
-            border: 2px solid #e21f4e;
-            color: #e21f4e;
-          }
-        }
-        &.message {
-          grid-column: span 2;
-          textarea {
-            transition: all 0.3s;
-            padding: 0.5rem;
-            margin-top: 0.5rem;
-            border-radius: 0.5rem;
-            border: 2px solid $color_sec_texte;
-            font-size: 1rem;
-            font-family: $main_font;
-            outline-style: none;
-            &:focus {
-              border: 3px solid $color_active;
-            }
-          }
-        }
-        label {
-          order: -1;
         }
       }
+      label {
+        order: -1;
+      }
+    }
+  }
+  .conditions {
+    color: $color_sec_texte;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+    a {
+      color: $color_sec_texte;
+    }
+    input {
+      width: 1rem;
     }
   }
 }

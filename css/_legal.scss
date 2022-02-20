@@ -1,0 +1,72 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .legal {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .intro {
+    line-height: 1.5rem;
+    background: url(/img/cover_fonction.jpg) no-repeat;
+    background-size: cover;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    article {
+      padding: 0 2rem 0 2rem;
+      max-width: $max_with;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    & h1 {
+      color: $color_main_texte;
+      font-size: 1.5em;
+    }
+    & p {
+      color: $color_main_texte;
+      font-size: 1em;
+      width: 70%;
+      margin: 0;
+    }
+    p:nth-child(4) {
+      font-weight: 500;
+      font-size: 1em;
+      width: 70%;
+      margin: 0;
+    }
+    br {
+      display: block; /* makes it have a width */
+      content: " "; /* clears default height */
+    }
+  }
+  .legal-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: $max_with;
+    flex-direction: column;
+    margin: 1rem 2rem 2rem 2rem;
+
+    .article {
+      line-height: 1.3rem;
+      //   padding: 0 2rem 0 2rem;
+      width: 100%;
+      p {
+        margin: 0;
+      }
+      h2 {
+        font-size: 1.3rem;
+        margin: 1.5rem 0 0.5rem 0;
+      }
+    }
+  }
+}
