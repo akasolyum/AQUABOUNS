@@ -41,6 +41,7 @@ allCross.forEach((Element) => {
         duration: 0.2,
         height: height,
         opacity: 1,
+
         padding: "20px 15px",
       });
     } else if (this.src.includes("minus")) {
@@ -49,6 +50,7 @@ allCross.forEach((Element) => {
         duration: 0.2,
         height: 0,
         opacity: 0,
+
         padding: "0px 15px",
       });
     }

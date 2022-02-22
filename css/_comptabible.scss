@@ -20,7 +20,7 @@ body {
       max-width: $max_with;
       min-width: 300px;
       height: auto;
-      margin: 5rem auto 5rem;
+      margin: 7rem auto 7rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -53,27 +53,17 @@ body {
         padding: 0px 15px;
         height: 0px;
         opacity: 0;
+        overflow: hidden;
         display: flex;
         align-items: flex-start;
         gap: 3rem;
         flex-wrap: wrap;
         justify-content: center;
-        .brand-orphek {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-          background-color: $color_fond;
-          width: auto;
-          padding: 2rem;
-          border-radius: 1rem;
-          img {
-            width: 9rem;
-          }
-        }
+
         h3 {
           color: white;
           margin: 2rem 0 2rem 0;
+          text-align: center;
         }
         svg {
           width: 3rem;
@@ -85,20 +75,35 @@ body {
           }
         }
         .brand {
+          position: relative;
           display: flex;
           align-items: center;
-          justify-content: center;
+          justify-content: space-between;
           flex-direction: column;
           background-color: $color_fond;
-          width: auto;
+          width: 13rem;
+          min-width: 12rem;
           padding: 2rem 1rem 2rem 1rem;
           border-radius: 1rem;
-          img {
-            width: 12rem;
+          height: 25rem;
+          .center-logo {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 70%;
+            height: 40%;
+            img {
+              width: 9rem;
+            }
           }
           h3 {
             color: white;
-            margin: 4rem 0 2rem 0;
+            margin: 100% 0 0;
+          }
+          p {
+            color: $color_therd_texte;
+            text-align: center;
           }
           svg {
             width: 3rem;
