@@ -38,6 +38,13 @@ body {
         list-style: none;
         align-self: center;
         font-weight: 400;
+        .cart {
+          background-image: url(/img/shopping-bag.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 1.5rem;
+          height: 1.5rem;
+        }
         > li {
           display: flex;
           align-items: center;

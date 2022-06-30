@@ -23,12 +23,7 @@ try {
     }
     function isElmNeed() {
       var config = (window.ec || {}).storefront || {};
-      if (
-        true ||
-        !!config.enable_new_product_list ||
-        !!config.enable_new_product_details ||
-        !!config.enable_new_shopping_cart
-      ) {
+      if (true || !!config.enable_new_product_list || !!config.enable_new_product_details || !!config.enable_new_shopping_cart) {
         return true;
       }
       return false;
@@ -37,34 +32,14 @@ try {
     /*! lazysizes - v5.1.2 */
     !(function (a, b) {
       var c = b(a, a.document);
-      (a.lazySizes = c),
-        "object" == typeof module && module.exports && (module.exports = c);
+      (a.lazySizes = c), "object" == typeof module && module.exports && (module.exports = c);
     })("undefined" != typeof window ? window : {}, function (a, b) {
       "use strict";
       var c, d;
       if (
         ((function () {
           var b,
-            c = {
-              lazyClass: "lazyload",
-              loadedClass: "lazyloaded",
-              loadingClass: "lazyloading",
-              preloadClass: "lazypreload",
-              errorClass: "lazyerror",
-              autosizesClass: "lazyautosizes",
-              srcAttr: "data-src",
-              srcsetAttr: "data-srcset",
-              sizesAttr: "data-sizes",
-              minSize: 40,
-              customMedia: {},
-              init: !0,
-              expFactor: 1.5,
-              hFac: 0.8,
-              loadMode: 2,
-              loadHidden: !0,
-              ricTimeout: 0,
-              throttleDelay: 125,
-            };
+            c = { lazyClass: "lazyload", loadedClass: "lazyloaded", loadingClass: "lazyloading", preloadClass: "lazypreload", errorClass: "lazyerror", autosizesClass: "lazyautosizes", srcAttr: "data-src", srcsetAttr: "data-srcset", sizesAttr: "data-sizes", minSize: 40, customMedia: {}, init: !0, expFactor: 1.5, hFac: 0.8, loadMode: 2, loadHidden: !0, ricTimeout: 0, throttleDelay: 125 };
           d = a.lazySizesConfig || a.lazysizesConfig || {};
           for (b in c) b in d || (d[b] = c[b]);
         })(),
@@ -85,19 +60,14 @@ try {
         p = {},
         q = Array.prototype.forEach,
         r = function (a, b) {
-          return (
-            p[b] || (p[b] = new RegExp("(\\s|^)" + b + "(\\s|$)")),
-            p[b].test(a[i]("class") || "") && p[b]
-          );
+          return p[b] || (p[b] = new RegExp("(\\s|^)" + b + "(\\s|$)")), p[b].test(a[i]("class") || "") && p[b];
         },
         s = function (a, b) {
-          r(a, b) ||
-            a.setAttribute("class", (a[i]("class") || "").trim() + " " + b);
+          r(a, b) || a.setAttribute("class", (a[i]("class") || "").trim() + " " + b);
         },
         t = function (a, b) {
           var c;
-          (c = r(a, b)) &&
-            a.setAttribute("class", (a[i]("class") || "").replace(c, " "));
+          (c = r(a, b)) && a.setAttribute("class", (a[i]("class") || "").replace(c, " "));
         },
         u = function (a, b, c) {
           var d = c ? h : "removeEventListener";
@@ -108,32 +78,17 @@ try {
         },
         v = function (a, d, e, f, g) {
           var h = b.createEvent("Event");
-          return (
-            e || (e = {}),
-            (e.instance = c),
-            h.initEvent(d, !f, !g),
-            (h.detail = e),
-            a.dispatchEvent(h),
-            h
-          );
+          return e || (e = {}), (e.instance = c), h.initEvent(d, !f, !g), (h.detail = e), a.dispatchEvent(h), h;
         },
         w = function (b, c) {
           var e;
-          !g && (e = a.picturefill || d.pf)
-            ? (c && c.src && !b[i]("srcset") && b.setAttribute("srcset", c.src),
-              e({ reevaluate: !0, elements: [b] }))
-            : c && c.src && (b.src = c.src);
+          !g && (e = a.picturefill || d.pf) ? (c && c.src && !b[i]("srcset") && b.setAttribute("srcset", c.src), e({ reevaluate: !0, elements: [b] })) : c && c.src && (b.src = c.src);
         },
         x = function (a, b) {
           return (getComputedStyle(a, null) || {})[b];
         },
         y = function (a, b, c) {
-          for (
-            c = c || a.offsetWidth;
-            c < d.minSize && b && !a._lazysizesWidth;
-
-          )
-            (c = b.offsetWidth), (b = b.parentNode);
+          for (c = c || a.offsetWidth; c < d.minSize && b && !a._lazysizesWidth; ) (c = b.offsetWidth), (b = b.parentNode);
           return c;
         },
         z = (function () {
@@ -144,14 +99,11 @@ try {
             f = d,
             g = function () {
               var b = f;
-              for (f = d.length ? e : d, a = !0, c = !1; b.length; )
-                b.shift()();
+              for (f = d.length ? e : d, a = !0, c = !1; b.length; ) b.shift()();
               a = !1;
             },
             h = function (d, e) {
-              a && !e
-                ? d.apply(this, arguments)
-                : (f.push(d), c || ((c = !0), (b.hidden ? k : l)(g)));
+              a && !e ? d.apply(this, arguments) : (f.push(d), c || ((c = !0), (b.hidden ? k : l)(g)));
             };
           return (h._lsFlush = g), h;
         })(),
@@ -179,20 +131,14 @@ try {
             i =
               m && g > 49
                 ? function () {
-                    m(h, { timeout: g }),
-                      g !== d.ricTimeout && (g = d.ricTimeout);
+                    m(h, { timeout: g }), g !== d.ricTimeout && (g = d.ricTimeout);
                   }
                 : A(function () {
                     k(h);
                   }, !0);
           return function (a) {
             var d;
-            (a = !0 === a) && (g = 33),
-              b ||
-                ((b = !0),
-                (d = e - (f.now() - c)),
-                d < 0 && (d = 0),
-                a || d < 9 ? i() : k(i, d));
+            (a = !0 === a) && (g = 33), b || ((b = !0), (d = e - (f.now() - c)), d < 0 && (d = 0), a || d < 9 ? i() : k(i, d));
           };
         },
         C = function (a) {
@@ -234,32 +180,13 @@ try {
               P--, (!a || P < 0 || !a.target) && (P = 0);
             },
             S = function (a) {
-              return (
-                null == J && (J = "hidden" == x(b.body, "visibility")),
-                J ||
-                  !(
-                    "hidden" == x(a.parentNode, "visibility") &&
-                    "hidden" == x(a, "visibility")
-                  )
-              );
+              return null == J && (J = "hidden" == x(b.body, "visibility")), J || !("hidden" == x(a.parentNode, "visibility") && "hidden" == x(a, "visibility"));
             },
             T = function (a, c) {
               var d,
                 f = a,
                 g = S(a);
-              for (
-                F -= c, I += c, G -= c, H += c;
-                g && (f = f.offsetParent) && f != b.body && f != e;
-
-              )
-                (g = (x(f, "opacity") || 1) > 0) &&
-                  "visible" != x(f, "overflow") &&
-                  ((d = f.getBoundingClientRect()),
-                  (g =
-                    H > d.left &&
-                    G < d.right &&
-                    I > d.top - 1 &&
-                    F < d.bottom + 1));
+              for (F -= c, I += c, G -= c, H += c; g && (f = f.offsetParent) && f != b.body && f != e; ) (g = (x(f, "opacity") || 1) > 0) && "visible" != x(f, "overflow") && ((d = f.getBoundingClientRect()), (g = H > d.left && G < d.right && I > d.top - 1 && F < d.bottom + 1));
               return g;
             },
             U = function () {
@@ -279,55 +206,10 @@ try {
               if ((o = d.loadMode) && P < 8 && (a = u.length)) {
                 for (f = 0, Q++; f < a; f++)
                   if (u[f] && !u[f]._lazyRace)
-                    if (!M || (c.prematureUnveil && c.prematureUnveil(u[f])))
-                      aa(u[f]);
-                    else if (
-                      (((p = u[f][i]("data-expand")) && (m = 1 * p)) || (m = O),
-                      r ||
-                        ((r =
-                          !d.expand || d.expand < 1
-                            ? e.clientHeight > 500 && e.clientWidth > 500
-                              ? 500
-                              : 370
-                            : d.expand),
-                        (c._defEx = r),
-                        (s = r * d.expFactor),
-                        (t = d.hFac),
-                        (J = null),
-                        O < s && P < 1 && Q > 2 && o > 2 && !b.hidden
-                          ? ((O = s), (Q = 0))
-                          : (O = o > 1 && Q > 1 && P < 6 ? r : N)),
-                      q !== m &&
-                        ((y = innerWidth + m * t),
-                        (D = innerHeight + m),
-                        (n = -1 * m),
-                        (q = m)),
-                      (h = u[f].getBoundingClientRect()),
-                      (I = h.bottom) >= n &&
-                        (F = h.top) <= D &&
-                        (H = h.right) >= n * t &&
-                        (G = h.left) <= y &&
-                        (I || H || G || F) &&
-                        (d.loadHidden || S(u[f])) &&
-                        ((l && P < 3 && !p && (o < 3 || Q < 4)) || T(u[f], m)))
-                    ) {
+                    if (!M || (c.prematureUnveil && c.prematureUnveil(u[f]))) aa(u[f]);
+                    else if ((((p = u[f][i]("data-expand")) && (m = 1 * p)) || (m = O), r || ((r = !d.expand || d.expand < 1 ? (e.clientHeight > 500 && e.clientWidth > 500 ? 500 : 370) : d.expand), (c._defEx = r), (s = r * d.expFactor), (t = d.hFac), (J = null), O < s && P < 1 && Q > 2 && o > 2 && !b.hidden ? ((O = s), (Q = 0)) : (O = o > 1 && Q > 1 && P < 6 ? r : N)), q !== m && ((y = innerWidth + m * t), (D = innerHeight + m), (n = -1 * m), (q = m)), (h = u[f].getBoundingClientRect()), (I = h.bottom) >= n && (F = h.top) <= D && (H = h.right) >= n * t && (G = h.left) <= y && (I || H || G || F) && (d.loadHidden || S(u[f])) && ((l && P < 3 && !p && (o < 3 || Q < 4)) || T(u[f], m)))) {
                       if ((aa(u[f]), (k = !0), P > 9)) break;
-                    } else
-                      !k &&
-                        l &&
-                        !j &&
-                        P < 4 &&
-                        Q < 4 &&
-                        o > 2 &&
-                        (g[0] || d.preloadAfterLoad) &&
-                        (g[0] ||
-                          (!p &&
-                            (I ||
-                              H ||
-                              G ||
-                              F ||
-                              "auto" != u[f][i](d.sizesAttr)))) &&
-                        (j = g[0] || u[f]);
+                    } else !k && l && !j && P < 4 && Q < 4 && o > 2 && (g[0] || d.preloadAfterLoad) && (g[0] || (!p && (I || H || G || F || "auto" != u[f][i](d.sizesAttr)))) && (j = g[0] || u[f]);
                 j && !k && aa(j);
               }
             },
@@ -335,11 +217,7 @@ try {
             W = function (a) {
               var b = a.target;
               if (b._lazyCache) return void delete b._lazyCache;
-              R(a),
-                s(b, d.loadedClass),
-                t(b, d.loadingClass),
-                u(b, Y),
-                v(b, "lazyloaded");
+              R(a), s(b, d.loadedClass), t(b, d.loadingClass), u(b, Y), v(b, "lazyloaded");
             },
             X = A(W),
             Y = function (a) {
@@ -355,26 +233,11 @@ try {
             $ = function (a) {
               var b,
                 c = a[i](d.srcsetAttr);
-              (b = d.customMedia[a[i]("data-media") || a[i]("media")]) &&
-                a.setAttribute("media", b),
-                c && a.setAttribute("srcset", c);
+              (b = d.customMedia[a[i]("data-media") || a[i]("media")]) && a.setAttribute("media", b), c && a.setAttribute("srcset", c);
             },
             _ = A(function (a, b, c, e, f) {
               var g, h, j, l, o, p;
-              (o = v(a, "lazybeforeunveil", b)).defaultPrevented ||
-                (e && (c ? s(a, d.autosizesClass) : a.setAttribute("sizes", e)),
-                (h = a[i](d.srcsetAttr)),
-                (g = a[i](d.srcAttr)),
-                f && ((j = a.parentNode), (l = j && n.test(j.nodeName || ""))),
-                (p = b.firesLoad || ("src" in a && (h || g || l))),
-                (o = { target: a }),
-                s(a, d.loadingClass),
-                p && (clearTimeout(m), (m = k(R, 2500)), u(a, Y, !0)),
-                l && q.call(j.getElementsByTagName("source"), $),
-                h
-                  ? a.setAttribute("srcset", h)
-                  : g && !l && (L.test(a.nodeName) ? Z(a, g) : (a.src = g)),
-                f && (h || l) && w(a, { src: g })),
+              (o = v(a, "lazybeforeunveil", b)).defaultPrevented || (e && (c ? s(a, d.autosizesClass) : a.setAttribute("sizes", e)), (h = a[i](d.srcsetAttr)), (g = a[i](d.srcAttr)), f && ((j = a.parentNode), (l = j && n.test(j.nodeName || ""))), (p = b.firesLoad || ("src" in a && (h || g || l))), (o = { target: a }), s(a, d.loadingClass), p && (clearTimeout(m), (m = k(R, 2500)), u(a, Y, !0)), l && q.call(j.getElementsByTagName("source"), $), h ? a.setAttribute("srcset", h) : g && !l && (L.test(a.nodeName) ? Z(a, g) : (a.src = g)), f && (h || l) && w(a, { src: g })),
                 a._lazyRace && delete a._lazyRace,
                 t(a, d.lazyClass),
                 z(function () {
@@ -395,17 +258,7 @@ try {
                   c = K.test(a.nodeName),
                   e = c && (a[i](d.sizesAttr) || a[i]("sizes")),
                   f = "auto" == e;
-                ((!f && l) ||
-                  !c ||
-                  (!a[i]("src") && !a.srcset) ||
-                  a.complete ||
-                  r(a, d.errorClass) ||
-                  !r(a, d.lazyClass)) &&
-                  ((b = v(a, "lazyunveilread").detail),
-                  f && E.updateElem(a, !0, a.offsetWidth),
-                  (a._lazyRace = !0),
-                  P++,
-                  _(a, b, f, e, c));
+                ((!f && l) || !c || (!a[i]("src") && !a.srcset) || a.complete || r(a, d.errorClass) || !r(a, d.lazyClass)) && ((b = v(a, "lazyunveilread").detail), f && E.updateElem(a, !0, a.offsetWidth), (a._lazyRace = !0), P++, _(a, b, f, e, c));
               }
             },
             ba = C(function () {
@@ -424,34 +277,15 @@ try {
             _: function () {
               (p = f.now()),
                 (c.elements = b.getElementsByClassName(d.lazyClass)),
-                (g = b.getElementsByClassName(
-                  d.lazyClass + " " + d.preloadClass
-                )),
+                (g = b.getElementsByClassName(d.lazyClass + " " + d.preloadClass)),
                 j("scroll", V, !0),
                 j("resize", V, !0),
-                a.MutationObserver
-                  ? new MutationObserver(V).observe(e, {
-                      childList: !0,
-                      subtree: !0,
-                      attributes: !0,
-                    })
-                  : (e[h]("DOMNodeInserted", V, !0),
-                    e[h]("DOMAttrModified", V, !0),
-                    setInterval(V, 999)),
+                a.MutationObserver ? new MutationObserver(V).observe(e, { childList: !0, subtree: !0, attributes: !0 }) : (e[h]("DOMNodeInserted", V, !0), e[h]("DOMAttrModified", V, !0), setInterval(V, 999)),
                 j("hashchange", V, !0),
-                [
-                  "focus",
-                  "mouseover",
-                  "click",
-                  "load",
-                  "transitionend",
-                  "animationend",
-                ].forEach(function (a) {
+                ["focus", "mouseover", "click", "load", "transitionend", "animationend"].forEach(function (a) {
                   b[h](a, V, !0);
                 }),
-                /d$|^c/.test(b.readyState)
-                  ? da()
-                  : (j("load", da), b[h]("DOMContentLoaded", V), k(da, 2e4)),
+                /d$|^c/.test(b.readyState) ? da() : (j("load", da), b[h]("DOMContentLoaded", V), k(da, 2e4)),
                 c.elements.length ? (U(), z._lsFlush()) : V();
             },
             checkElems: V,
@@ -463,30 +297,13 @@ try {
           var a,
             c = A(function (a, b, c, d) {
               var e, f, g;
-              if (
-                ((a._lazysizesWidth = d),
-                (d += "px"),
-                a.setAttribute("sizes", d),
-                n.test(b.nodeName || ""))
-              )
-                for (
-                  e = b.getElementsByTagName("source"), f = 0, g = e.length;
-                  f < g;
-                  f++
-                )
-                  e[f].setAttribute("sizes", d);
+              if (((a._lazysizesWidth = d), (d += "px"), a.setAttribute("sizes", d), n.test(b.nodeName || ""))) for (e = b.getElementsByTagName("source"), f = 0, g = e.length; f < g; f++) e[f].setAttribute("sizes", d);
               c.detail.dataAttr || w(a, c.detail);
             }),
             e = function (a, b, d) {
               var e,
                 f = a.parentNode;
-              f &&
-                ((d = y(a, f, d)),
-                (e = v(a, "lazybeforesizes", { width: d, dataAttr: !!b })),
-                e.defaultPrevented ||
-                  ((d = e.detail.width) &&
-                    d !== a._lazysizesWidth &&
-                    c(a, f, e, d)));
+              f && ((d = y(a, f, d)), (e = v(a, "lazybeforesizes", { width: d, dataAttr: !!b })), e.defaultPrevented || ((d = e.detail.width) && d !== a._lazysizesWidth && c(a, f, e, d)));
             },
             f = function () {
               var b,
@@ -509,19 +326,7 @@ try {
         k(function () {
           d.init && F();
         }),
-        (c = {
-          cfg: d,
-          autoSizer: E,
-          loader: D,
-          init: F,
-          uP: w,
-          aC: s,
-          rC: t,
-          hC: r,
-          fire: v,
-          gW: y,
-          rAF: z,
-        })
+        (c = { cfg: d, autoSizer: E, loader: D, init: F, uP: w, aC: s, rC: t, hC: r, fire: v, gW: y, rAF: z })
       );
     });
     window.ec = window.ec || {};
@@ -540,58 +345,51 @@ try {
         this._events = this._events || {};
         if (event in this._events === false) return;
         for (var i = 0; i < this._events[event].length; i++) {
-          this._events[event][i].apply(
-            this,
-            Array.prototype.slice.call(arguments, 1)
-          );
+          this._events[event][i].apply(this, Array.prototype.slice.call(arguments, 1));
         }
       },
     };
     window.ec.events = window.ecwidEvents;
     (function () {
       var injectRosettaRetry = 0;
-      function tryInjectRosettaScript(url) {
+      function tryInjectRosettaScript(cdnUrl, s3Url) {
+        injectRosettaRetry++;
+        var url = injectRosettaRetry < 5 ? cdnUrl : s3Url;
         var script = document.createElement("script");
         script.type = "text/javascript";
         script.onerror = function () {
           document.getElementsByTagName("head")[0].removeChild(script);
-          injectRosettaRetry++;
           if (injectRosettaRetry < 10) {
-            setTimeout(tryInjectRosettaScript.bind(this, url), 200);
+            setTimeout(tryInjectRosettaScript.bind(this, cdnUrl, s3Url), 200);
           } else {
-            // ретраи кончились, пошлем ошибку в ga, если он есть на странице
             if (!!window.ga) {
               window.ga("send", "exception", {
                 exDescription: "Translation with url " + url + " not loaded.",
                 exFatal: true,
               });
             }
-            console &&
-              console.error &&
-              console.error("Load translation failed: ", url);
+            console && console.error && console.error("Load translation failed: ", url);
+            window.ecwid_elm_config = window.ecwid_elm_config || {};
             window.ecwid_elm_config.translations_load_failed_url = url;
-            window.ecwidEvents.trigger("TRANSLATIONS_LOAD_FAILED", url);
+            if (!!window.ecwidEvents) {
+              window.ecwidEvents.trigger("TRANSLATIONS_LOAD_FAILED", url);
+            }
             if (!!window.Ecwid && !!window.Ecwid.logException) {
-              window.Ecwid.logException(
-                "Failed to load translations. Url: " +
-                  url +
-                  ". retry number: " +
-                  injectRosettaRetry
-              );
+              window.Ecwid.logException("Failed to load translations. Url: " + url + ". retry number: " + injectRosettaRetry);
             }
           }
         };
         script.onload = function () {
           window.ecwid_elm_config = window.ecwid_elm_config || {};
           window.ecwid_elm_config.translations_loaded = true;
-          window.ecwidEvents.trigger("TRANSLATIONS_LOADED");
+          if (!!window.ecwidEvents) {
+            window.ecwidEvents.trigger("TRANSLATIONS_LOADED");
+          }
         };
         script.src = url;
         document.getElementsByTagName("head")[0].appendChild(script);
       }
-      tryInjectRosettaScript(
-        "https://d2scn539ulxr09.cloudfront.net/rosetta/translations/new-frontend/files/new-frontend.fr.-989802046.js"
-      );
+      tryInjectRosettaScript("https://d2scn539ulxr09.cloudfront.net/rosetta/translations2022/new-frontend/files/new-frontend.fr.-738547582.js", "https://ecwid-rosetta.s3.amazonaws.com/translations2022/new-frontend/files/new-frontend.fr.-738547582.translations");
     })();
     (function () {
       window.ecwid_init_elm_config = function () {
@@ -603,9 +401,7 @@ try {
             window.ecwid_elm_config.loaded = true;
             window.ecwidEvents.trigger("ELM_LOADED");
           };
-          script.src = selectJsVersion(
-            "https://d2scn539ulxr09.cloudfront.net/venera/static/ecwid-storefront.72b3a1c07ffe26e5ac8bdc30a0c5bac0.min.js"
-          );
+          script.src = selectJsVersion("https://d2scn539ulxr09.cloudfront.net/venera/static/ecwid-storefront.34f12a45c9b7fb4a2b12ca43b9c2fc43.min.js");
           document.getElementsByTagName("head")[0].appendChild(script);
         }
         function loadCheckout(callback) {
@@ -623,9 +419,7 @@ try {
             window.ecwid_elm_config.checkoutLoaded = true;
             callback();
           };
-          script.src = selectJsVersion(
-            "https://d2scn539ulxr09.cloudfront.net/venera/static/ecwid-checkout.f7b5a03f23ee472ca05b873e300b9971.min.js"
-          );
+          script.src = selectJsVersion("https://d2scn539ulxr09.cloudfront.net/venera/static/ecwid-checkout.67b61a62f645fc5de34a04fb53e963cc.min.js");
           document.getElementsByTagName("head")[0].appendChild(script);
           window.ecwid_elm_config.checkoutAdded = true;
         }
@@ -649,9 +443,7 @@ try {
         }
         function isDebugEnabled() {
           try {
-            return (
-              "true" === window.localStorage.getItem("debug_ecwid_storefront")
-            );
+            return "true" === window.localStorage.getItem("debug_ecwid_storefront");
           } catch (e) {
             return false;
           }
@@ -665,8 +457,7 @@ try {
         window.ecwid_elm_config = window.ecwid_elm_config || {};
         window.ecwid_elm_config.consume = consume;
         window.ecwid_elm_config.consumeTranslations = consumeTranslations;
-        window.ecwid_elm_config.consumeTranslationsLoadFailed =
-          consumeTranslationsLoadFailed;
+        window.ecwid_elm_config.consumeTranslationsLoadFailed = consumeTranslationsLoadFailed;
         window.ecwid_elm_config.loadCheckout = loadCheckout;
         load();
       };
@@ -680,18 +471,11 @@ try {
       var cartData = window.Ecwid.restoreCartData;
       for (var item in cartData) {
         if (!cartData.hasOwnProperty(item)) continue;
-        if (
-          item.match(/PSecwid__\d+PScart/) ||
-          item.match(/SP-ecwid__\d+SP-cart/)
-        ) {
+        if (item.match(/.*_expire/)) continue;
+        if (item.match(/PSecwid__\d+PScart/) || item.match(/SP-ecwid__\d+SP-cart/)) {
           var cartDataItem = JSON.parse(cartData[item]);
-          if (
-            cartDataItem &&
-            cartDataItem.order &&
-            !window.ec.config.custom_redirect_after_purchase
-          ) {
-            window.ec.config.custom_redirect_after_purchase =
-              cartDataItem.order.refererUrl;
+          if (cartDataItem && cartDataItem.order && !window.ec.config.custom_redirect_after_purchase) {
+            window.ec.config.custom_redirect_after_purchase = cartDataItem.order.refererUrl;
           }
         }
       }
@@ -714,13 +498,11 @@ try {
       var that = this;
       this.registerConsumer = function (cons) {
         that.consumers.push(cons);
-        for (var i = 0; i < that.extensions.length; i++)
-          addExtension(cons, that.extensions[i]);
+        for (var i = 0; i < that.extensions.length; i++) addExtension(cons, that.extensions[i]);
       };
       this.addExtension = this.add = function (ext) {
         that.extensions.push(ext);
-        for (var i = 0; i < that.consumers.length; i++)
-          addExtension(that.consumers[i], ext);
+        for (var i = 0; i < that.consumers.length; i++) addExtension(that.consumers[i], ext);
       };
       this.clear = function () {
         that.extensions = [];
@@ -741,15 +523,9 @@ try {
     }
     window.ec.config.chameleon = chameleon;
     window.Ecwid = {
-      storefrontVersion: "2022-6275-g7303a656280",
-      MessageBundles:
-        window.Ecwid && window.Ecwid.MessageBundles
-          ? window.Ecwid.MessageBundles
-          : {},
-      restoreCartData:
-        window.Ecwid && window.Ecwid.restoreCartData
-          ? window.Ecwid.restoreCartData
-          : {},
+      storefrontVersion: "2022-24329-ge1a978379bb",
+      MessageBundles: window.Ecwid && window.Ecwid.MessageBundles ? window.Ecwid.MessageBundles : {},
+      restoreCartData: window.Ecwid && window.Ecwid.restoreCartData ? window.Ecwid.restoreCartData : {},
       ExtensionPoint: ep,
       ProductBrowser: { Links: new ep(), CategoryView: proxyChain() },
       Controller: proxyChain(),
@@ -771,7 +547,7 @@ try {
       OnProductOptionsChanged: new ep(),
       OnConsentChanged: new ep(),
       OnPageSwitch: new ep(),
-      signature: "bf01d8ebf6ec71913a26e2f00d61149e-0",
+      signature: "189637e96366de4f313f1c15f22530ce-0",
       _isInteractiveEnabled: (function () {
         var cache = null;
         function _getLoadedScripts() {
@@ -791,10 +567,7 @@ try {
               fullPathLoadedScripts.push(scriptPath);
             }
           }
-          return {
-            loadedScriptNames: loadedScripts,
-            fullPathLoadedScripts: fullPathLoadedScripts,
-          };
+          return { loadedScriptNames: loadedScripts, fullPathLoadedScripts: fullPathLoadedScripts };
         }
         function _getIncompatibleScript() {
           var scripts = _getLoadedScripts();
@@ -829,54 +602,37 @@ try {
               return null;
             },
             function checkForPipdigBlossom() {
-              var hasThemeStyle =
-                document.querySelectorAll(
-                  "link[rel='stylesheet'][id='pipdig-style-css'][href*='themes/pipdig-blossom/style.css']"
-                ).length > 0;
+              var hasThemeStyle = document.querySelectorAll("link[rel='stylesheet'][id='pipdig-style-css'][href*='themes/pipdig-blossom/style.css']").length > 0;
               if (hasThemeStyle) {
                 return "pipdig-blossom";
               }
               return null;
             },
             function checkForSkel() {
-              var hasScripts =
-                isScriptLoadedByName("skel-layers.min.js") ||
-                isScriptLoadedByName("skel-layers.js");
-              var hasPlugin =
-                typeof skel != "undefined" &&
-                skel.hasOwnProperty("plugins") &&
-                skel.plugins.hasOwnProperty("layers");
+              var hasScripts = isScriptLoadedByName("skel-layers.min.js") || isScriptLoadedByName("skel-layers.js");
+              var hasPlugin = typeof skel != "undefined" && skel.hasOwnProperty("plugins") && skel.plugins.hasOwnProperty("layers");
               if (hasScripts || hasPlugin) {
                 return "skel-layers";
               }
               return null;
             },
             function checkForJPanelMenu() {
-              var hasScripts =
-                isScriptLoadedByName("jquery.jpanelmenu.min.js") ||
-                isScriptLoadedByName("jquery.jpanelmenu.js");
-              var hasPlugin =
-                typeof jQuery != "undefined" &&
-                jQuery.hasOwnProperty("jPanelMenu") &&
-                typeof jQuery.jPanelMenu == "function";
+              var hasScripts = isScriptLoadedByName("jquery.jpanelmenu.min.js") || isScriptLoadedByName("jquery.jpanelmenu.js");
+              var hasPlugin = typeof jQuery != "undefined" && jQuery.hasOwnProperty("jPanelMenu") && typeof jQuery.jPanelMenu == "function";
               if (hasScripts || hasPlugin) {
                 return "jPanelMenu";
               }
               return null;
             },
             function checkForWeeblyUnresponsiveTheme() {
-              var useUnresponsiveTheme =
-                isScriptLoadedByName("main-mobile.js") &&
-                typeof Weebly != "undefined";
+              var useUnresponsiveTheme = isScriptLoadedByName("main-mobile.js") && typeof Weebly != "undefined";
               if (useUnresponsiveTheme) {
                 return "weeblyUnresponsiveTheme";
               }
               return null;
             },
             function checkForArtisteer() {
-              var badScriptLoaded =
-                isScriptLoadedByName("script.responsive.js") &&
-                typeof responsiveDesign != "undefined";
+              var badScriptLoaded = isScriptLoadedByName("script.responsive.js") && typeof responsiveDesign != "undefined";
               if (badScriptLoaded) {
                 return "Artisteer";
               }
@@ -904,38 +660,23 @@ try {
             var incompatibleScript = _getIncompatibleScript();
             if (incompatibleScript) {
               cache = false;
-              EcwidLogger.log(
-                "Interactive was disabled by plugin or script " +
-                  incompatibleScript
-              );
+              EcwidLogger.log("Interactive was disabled by plugin or script " + incompatibleScript);
             }
           }
           if (((window.ec || {}).config || {}).interactive != undefined) {
             cache = !!window.ec.config.interactive;
-            EcwidLogger.log(
-              "Interactive was explicitly overriden with value " + cache
-            );
+            EcwidLogger.log("Interactive was explicitly overriden with value " + cache);
           }
           return cache;
         };
       })(),
       _isHoverMustBeDisabledOnDevice: function () {
-        return (
-          ("ontouchstart" in window ||
-            !!(window.DocumentTouch && document instanceof DocumentTouch)) &&
-          typeof window.matchMedia == "function" &&
-          !window.matchMedia("(pointer: fine)").matches &&
-          window.matchMedia("(hover: none)").matches
-        );
+        return ("ontouchstart" in window || !!(window.DocumentTouch && document instanceof DocumentTouch)) && typeof window.matchMedia == "function" && !window.matchMedia("(pointer: fine)").matches && window.matchMedia("(hover: none)").matches;
       },
       _injectEcwidCss: function () {
         var cssUrlAddition = "";
-        cssUrlAddition += window.css_selectors_prefix
-          ? "&id-selector=" + window.css_selectors_prefix
-          : "";
-        cssUrlAddition += Ecwid._isHoverMustBeDisabledOnDevice()
-          ? "&hover=disable"
-          : "";
+        cssUrlAddition += window.css_selectors_prefix ? "&id-selector=" + window.css_selectors_prefix : "";
+        cssUrlAddition += Ecwid._isHoverMustBeDisabledOnDevice() ? "&hover=disable" : "";
         cssUrlAddition += isElmNeed() ? "&frontendV2" : "";
         ChameleonIntegration = {
           getChameleonColors: function () {
@@ -945,27 +686,18 @@ try {
               return colors;
             }
             var colorForeground = getComputedStyle(parent, null).color;
-            if (
-              colorForeground.replace(/ /g, "") != "rgba(0,0,0,0)" &&
-              colorForeground != "transparent"
-            ) {
+            if (colorForeground.replace(/ /g, "") != "rgba(0,0,0,0)" && colorForeground != "transparent") {
               colors["color-foreground"] = colorForeground;
               colors["color-price"] = colors["color-foreground"];
             }
             var colorBackground = this.getBackground(parent);
-            if (
-              colorBackground.replace(/ /g, "") != "rgba(0,0,0,0)" &&
-              colorBackground != "transparent"
-            ) {
+            if (colorBackground.replace(/ /g, "") != "rgba(0,0,0,0)" && colorBackground != "transparent") {
               colors["color-background"] = colorBackground;
             } else {
               colors["color-background"] = "white";
             }
             var colorLink = this.getLinkColor(parent);
-            if (
-              colorLink.replace(/ /g, "") != "rgba(0,0,0,0)" &&
-              colorLink != "transparent"
-            ) {
+            if (colorLink.replace(/ /g, "") != "rgba(0,0,0,0)" && colorLink != "transparent") {
               colors["color-link"] = colorLink;
             }
             return colors;
@@ -980,14 +712,7 @@ try {
             return font;
           },
           findAncestor: function () {
-            var widgetTypes = [
-              "ProductBrowser",
-              "SingleProduct",
-              "Product",
-              "Minicart",
-              "CategoriesV2",
-              "VCategories",
-            ];
+            var widgetTypes = ["ProductBrowser", "SingleProduct", "Product", "Minicart", "CategoriesV2", "VCategories"];
             for (var i = 0; i < widgetTypes.length; ++i) {
               var productWidget = this.extractWidget(widgetTypes[i]);
               if (productWidget) {
@@ -1016,19 +741,12 @@ try {
             var a = document.createElement("a");
             a.href = a.textContent = url = "";
             parent.appendChild(a);
-            var primary_link = document.defaultView.getComputedStyle(
-              a,
-              null
-            ).color;
+            var primary_link = document.defaultView.getComputedStyle(a, null).color;
             parent.removeChild(a);
             return primary_link;
           },
           toCamelCase: function (s) {
-            for (
-              var exp = /-([a-z])/;
-              exp.test(s);
-              s = s.replace(exp, RegExp.$1.toUpperCase())
-            );
+            for (var exp = /-([a-z])/; exp.test(s); s = s.replace(exp, RegExp.$1.toUpperCase()));
             return s;
           },
           getStyle: function (e, a) {
@@ -1042,12 +760,7 @@ try {
           },
           getBackground: function (e) {
             var v = this.getStyle(e, "background-color");
-            while (
-              !v ||
-              v == "transparent" ||
-              v == "#000000" ||
-              v == "rgba(0, 0, 0, 0)"
-            ) {
+            while (!v || v == "transparent" || v == "#000000" || v == "rgba(0, 0, 0, 0)") {
               if (e == document.documentElement) v = "white";
               else {
                 e = e.parentNode;
@@ -1065,51 +778,32 @@ try {
           for (var key in colors) {
             if (colors.hasOwnProperty(key)) {
               var value = colors[key];
-              cssColorParams +=
-                "&" +
-                encodeURIComponent(key) +
-                "=" +
-                encodeURIComponent(value.substring(0, valueLengthLimit));
+              cssColorParams += "&" + encodeURIComponent(key) + "=" + encodeURIComponent(value.substring(0, valueLengthLimit));
             }
           }
           return cssColorParams;
         }
         function isIOS13() {
           var ua = navigator.userAgent;
-          var uaSimilarToIos =
-            /Version\/13/.test(ua) &&
-            (/iPad/.test(ua) ||
-              /iPod/.test(ua) ||
-              /iPhone/.test(ua) ||
-              /Intel Mac OS X/.test(ua));
-          var supportTouchEvents =
-            "ontouchstart" in window ||
-            !!(window.DocumentTouch && document instanceof DocumentTouch);
+          var uaSimilarToIos = /Version\/13/.test(ua) && (/iPad/.test(ua) || /iPod/.test(ua) || /iPhone/.test(ua) || /Intel Mac OS X/.test(ua));
+          var supportTouchEvents = "ontouchstart" in window || !!(window.DocumentTouch && document instanceof DocumentTouch);
           return uaSimilarToIos && supportTouchEvents;
         }
         var colors;
-        if (
-          window.ec &&
-          window.ec.config &&
-          window.ec.config.chameleon &&
-          window.ec.config.chameleon.colors
-        ) {
+        if (window.ec && window.ec.config && window.ec.config.chameleon && window.ec.config.chameleon.colors) {
           colors = window.ec.config.chameleon.colors;
         }
         // disable 'chameleon' if the page doesn't have additional styles (ECWID-26112)
         var countStyles = document.styleSheets.length;
-        var noStyle =
-          countStyles == 0 || (countStyles == 1 && window.ecwid_loader_shown);
+        var noStyle = countStyles == 0 || (countStyles == 1 && window.ecwid_loader_shown);
         var chameleonEnabled = false || (false && !isOnIframe());
         if (((!colors && chameleonEnabled) || colors === "auto") && !noStyle) {
           colors = ChameleonIntegration.getChameleonColors();
         }
         window.ec = window.ec || {};
         window.ec.config = window.ec.config || {};
-        window.ec.config.chameleonDefaults =
-          window.ec.config.chameleonDefaults || {};
-        window.ec.config.chameleonDefaults.gallery =
-          window.ec.config.chameleonDefaults.gallery || {};
+        window.ec.config.chameleonDefaults = window.ec.config.chameleonDefaults || {};
+        window.ec.config.chameleonDefaults.gallery = window.ec.config.chameleonDefaults.gallery || {};
         var valueLengthLimit;
         if (!!colors) {
           valueLengthLimit = 50;
@@ -1117,12 +811,7 @@ try {
           window.ec.config.chameleonDefaults.colors = colors;
         }
         var font;
-        if (
-          window.ec &&
-          window.ec.config &&
-          window.ec.config.chameleon &&
-          window.ec.config.chameleon.font
-        ) {
+        if (window.ec && window.ec.config && window.ec.config.chameleon && window.ec.config.chameleon.font) {
           font = window.ec.config.chameleon.font;
         }
         if ((!font && chameleonEnabled) || font === "auto") {
@@ -1143,10 +832,7 @@ try {
             var str = "";
             var delimiter = "";
             for (var i = 0; i < families.length; i++) {
-              if (
-                str.length + families[i].length + delimiter.length >
-                valueLengthLimit
-              ) {
+              if (str.length + families[i].length + delimiter.length > valueLengthLimit) {
                 break;
               }
               str += delimiter + families[i];
@@ -1157,13 +843,7 @@ try {
           }
         }
         var useExactColors;
-        if (
-          window.ec &&
-          window.ec.config &&
-          window.ec.config.chameleon &&
-          window.ec.config.chameleon.gallery &&
-          window.ec.config.chameleon.gallery.useExactColors
-        ) {
+        if (window.ec && window.ec.config && window.ec.config.chameleon && window.ec.config.chameleon.gallery && window.ec.config.chameleon.gallery.useExactColors) {
           useExactColors = window.ec.config.chameleon.gallery.useExactColors;
         }
         if (!useExactColors && chameleonEnabled) {
@@ -1177,12 +857,8 @@ try {
           }
           cssUrlAddition += "&useExactGalleryColors=" + useExactColors;
         }
-        window.ec_legacyCssUrl =
-          "https://d1oxsl77a1kjht.cloudfront.net/css/new/cut?hc=-234063976&ownerid=55818003&useProximaNovaFont=true" +
-          cssUrlAddition;
-        var cssUrl =
-          "https://d1oxsl77a1kjht.cloudfront.net/css/new?hc=-234063976&ownerid=55818003&useProximaNovaFont=true" +
-          cssUrlAddition;
+        window.ec_legacyCssUrl = "https://d1oxsl77a1kjht.cloudfront.net/css/new/cut?hc=1663062571&ownerid=55818003&useProximaNovaFont=true" + cssUrlAddition;
+        var cssUrl = "https://d1oxsl77a1kjht.cloudfront.net/css/new?hc=1663062571&ownerid=55818003&useProximaNovaFont=true" + cssUrlAddition;
         var l = document.createElement("link");
         l.setAttribute("rel", "stylesheet");
         l.setAttribute("href", cssUrl);
@@ -1224,11 +900,7 @@ try {
       _waitForCssLoaded: function (callback) {
         var ecwidCssLoadedTimer = setInterval(function () {
           try {
-            if (
-              Ecwid._documentReadyStateIsComplete() ||
-              (/interactive/.test(document.readyState) &&
-                Ecwid._isAllCssLoaded())
-            ) {
+            if (Ecwid._documentReadyStateIsComplete() || (/interactive/.test(document.readyState) && Ecwid._isAllCssLoaded())) {
               clearInterval(ecwidCssLoadedTimer);
               callback();
             }
@@ -1267,9 +939,7 @@ try {
       },
       _unloadEcwidCss: function () {
         if (window.ec && window.ec.cssLinkElement) {
-          window.ec.cssLinkElement.parentNode.removeChild(
-            window.ec.cssLinkElement
-          );
+          window.ec.cssLinkElement.parentNode.removeChild(window.ec.cssLinkElement);
           delete window.ec.cssLinkElement;
         }
       },
@@ -1308,32 +978,7 @@ try {
         if (window.ecwid_dynamic_widgets) {
           return;
         }
-        html =
-          "<style>" +
-          "#ecwid_loading_indicator { width: 100%; height: 100%; min-height: 250px; position: relative; }" +
-          "#ecwid_loading_indicator, #ecwid_loading_indicator * { box-sizing: content-box; -webkit-transform-origin: center center; -ms-transform-origin: center center; -o-transform-origin: center center; transform-origin: center center; }" +
-          "#ecwid_loading_indicator .loader { width: 88px; height: 88px; margin-left: -57px; margin-top: -57px; position: absolute; left: 50%; top: 50%; padding: 13px; border-radius: 50%; }" +
-          "#ecwid_loading_indicator.ecwid-preloading .loader { box-shadow: none; background-color: transparent; }" +
-          "#ecwid_loading_indicator .loader .spinner-ball-outer {" +
-          "width: 88px; height: 88px; position: static; top: 0; left: 0; -webkit-animation: ecwid-spinright .8s infinite linear; animation: ecwid-spinright .8s infinite linear; " +
-          "background: transparent url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='88' viewBox='0 0 88 88'%3E%3Cpath fill='none' stroke='%23068eef' stroke-linecap='round' stroke-width='3' d='M64.8 79.5C58.4 83.3 51 85.5 43 85.5 27 85.5 13 76.6 5.8 63.5M64.4 6.2C77 13.6 85.5 27.3 85.5 43 85.5 50.7 83.4 58 79.8 64.2M.5 43C.5 19.5 19.5.5 43 .5' transform='translate(1 1)'/%3E%3C/svg%3E\") center center no-repeat; background-size: 88px auto; " +
-          "}" +
-          "#ecwid_loading_indicator .loader .spinner-ball-inner {" +
-          "width: 40px; height: 40px; position: static; top: 0; left: 0; -webkit-animation: ecwid-spinleft .5s infinite linear; animation: ecwid-spinleft .5s infinite linear; margin: -64px auto 64px; " +
-          "background: transparent url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath fill='%23068eef' d='M20 39.5C9.2 39.5.5 30.8.5 20S9.2.5 20 .5 39.5 9.2 39.5 20c0 .8-.7 1.5-1.5 1.5s-1.5-.7-1.5-1.5c0-9.1-7.4-16.5-16.5-16.5S3.5 10.9 3.5 20 10.9 36.5 20 36.5c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5z'/%3E%3C/svg%3E\") center center no-repeat; background-size: 40px auto; " +
-          "}" +
-          "#ecwid_loading_indicator .loader img.loader-object { width: 100%; max-width: 1000px; min-width: 0; height: 100%; max-height: 1000px; min-height: 0; position: static; padding: 0; margin: 0; border: 0; box-shadow: none; background: transparent none; display: block; float: none; visibility: visible; opacity: 1; -webkit-transform: none; transform: none; -webkit-animation: none; animation: none; border-radius: 50%}" +
-          "@keyframes ecwid-spinleft { 0% { transform: rotate(360deg); } 100% { transform: rotate(0deg); }}" +
-          "@-webkit-keyframes ecwid-spinleft { 0% { -webkit-transform: rotate(360deg); } 100% { -webkit-transform: rotate(0deg); }}" +
-          "@keyframes ecwid-spinright { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); }}" +
-          "@-webkit-keyframes ecwid-spinright { 0% { -webkit-transform: rotate(0deg); } 100% { -webkit-transform: rotate(360deg); }}" +
-          "</style>" +
-          '<div id="ecwid_loading_indicator" class="ecwid-loadingIndicator ecwid-preloading">' +
-          '<div class="loader loader-mixed">' +
-          '<div class="spinner-ball-outer"></div>' +
-          '<div class="spinner-ball-inner"></div>' +
-          "</div>" +
-          "</div>";
+        html = "<style>" + "#ecwid_loading_indicator { width: 100%; height: 100%; min-height: 250px; position: relative; }" + "#ecwid_loading_indicator, #ecwid_loading_indicator * { box-sizing: content-box; -webkit-transform-origin: center center; -ms-transform-origin: center center; -o-transform-origin: center center; transform-origin: center center; }" + "#ecwid_loading_indicator .loader { width: 88px; height: 88px; margin-left: -57px; margin-top: -57px; position: absolute; left: 50%; top: 50%; padding: 13px; border-radius: 50%; }" + "#ecwid_loading_indicator.ecwid-preloading .loader { box-shadow: none; background-color: transparent; }" + "#ecwid_loading_indicator .loader .spinner-ball-outer {" + "width: 88px; height: 88px; position: static; top: 0; left: 0; -webkit-animation: ecwid-spinright .8s infinite linear; animation: ecwid-spinright .8s infinite linear; " + "background: transparent url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='88' viewBox='0 0 88 88'%3E%3Cpath fill='none' stroke='%23068eef' stroke-linecap='round' stroke-width='3' d='M64.8 79.5C58.4 83.3 51 85.5 43 85.5 27 85.5 13 76.6 5.8 63.5M64.4 6.2C77 13.6 85.5 27.3 85.5 43 85.5 50.7 83.4 58 79.8 64.2M.5 43C.5 19.5 19.5.5 43 .5' transform='translate(1 1)'/%3E%3C/svg%3E\") center center no-repeat; background-size: 88px auto; " + "}" + "#ecwid_loading_indicator .loader .spinner-ball-inner {" + "width: 40px; height: 40px; position: static; top: 0; left: 0; -webkit-animation: ecwid-spinleft .5s infinite linear; animation: ecwid-spinleft .5s infinite linear; margin: -64px auto 64px; " + "background: transparent url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath fill='%23068eef' d='M20 39.5C9.2 39.5.5 30.8.5 20S9.2.5 20 .5 39.5 9.2 39.5 20c0 .8-.7 1.5-1.5 1.5s-1.5-.7-1.5-1.5c0-9.1-7.4-16.5-16.5-16.5S3.5 10.9 3.5 20 10.9 36.5 20 36.5c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5z'/%3E%3C/svg%3E\") center center no-repeat; background-size: 40px auto; " + "}" + "#ecwid_loading_indicator .loader img.loader-object { width: 100%; max-width: 1000px; min-width: 0; height: 100%; max-height: 1000px; min-height: 0; position: static; padding: 0; margin: 0; border: 0; box-shadow: none; background: transparent none; display: block; float: none; visibility: visible; opacity: 1; -webkit-transform: none; transform: none; -webkit-animation: none; animation: none; border-radius: 50%}" + "@keyframes ecwid-spinleft { 0% { transform: rotate(360deg); } 100% { transform: rotate(0deg); }}" + "@-webkit-keyframes ecwid-spinleft { 0% { -webkit-transform: rotate(360deg); } 100% { -webkit-transform: rotate(0deg); }}" + "@keyframes ecwid-spinright { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); }}" + "@-webkit-keyframes ecwid-spinright { 0% { -webkit-transform: rotate(0deg); } 100% { -webkit-transform: rotate(360deg); }}" + "</style>" + '<div id="ecwid_loading_indicator" class="ecwid-loadingIndicator ecwid-preloading">' + '<div class="loader loader-mixed">' + '<div class="spinner-ball-outer"></div>' + '<div class="spinner-ball-inner"></div>' + "</div>" + "</div>";
         var element = document.createElement("div");
         element.innerHTML = html;
         var e = document.getElementById(id);
@@ -1342,20 +987,13 @@ try {
         }
       },
       _onBodyDone: function () {
-        if (
-          (!window.ecwid_bodyDone &&
-            !Ecwid._hasFacebookIframe() &&
-            !window.ecwid_dynamic_widgets) ||
-          (window.ecwid_dynamic_widgets && !window.ecwid_bodyDone)
-        ) {
+        if ((!window.ecwid_bodyDone && !Ecwid._hasFacebookIframe() && !window.ecwid_dynamic_widgets) || (window.ecwid_dynamic_widgets && !window.ecwid_bodyDone)) {
           window.ecwid_bodyDone = true;
           Ecwid._loadEcwidCss();
           var useStubbedVersionIfAvailable = true;
           var forceUseStubbedVersion = false;
           var isNewStorefrontOnly = Ecwid._isNewStorefrontOnly();
-          var useStubbedVersion =
-            forceUseStubbedVersion ||
-            (useStubbedVersionIfAvailable && isNewStorefrontOnly);
+          var useStubbedVersion = forceUseStubbedVersion || (useStubbedVersionIfAvailable && isNewStorefrontOnly);
           EcwidLogger.log("Nocache params: ", {
             useStubbedVersionIfAvailable: useStubbedVersionIfAvailable,
             forceUseStubbedVersion: forceUseStubbedVersion,
@@ -1367,8 +1005,7 @@ try {
             ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub = function () {
               var U = "bootstrap",
                 V = "begin",
-                W =
-                  "gwt.codesvr.ru.cdev.xnext.legacyfrontendstub.LegacyFrontendStub=",
+                W = "gwt.codesvr.ru.cdev.xnext.legacyfrontendstub.LegacyFrontendStub=",
                 X = "gwt.codesvr=",
                 Y = "ru.cdev.xnext.legacyfrontendstub.LegacyFrontendStub",
                 Z = "startup",
@@ -1377,8 +1014,7 @@ try {
                 ab = 1,
                 bb = "iframe",
                 cb = "fitvidsignore",
-                db =
-                  "position:absolute; width:0; height:0; border:none; left: -1000px;",
+                db = "position:absolute; width:0; height:0; border:none; left: -1000px;",
                 eb = " top: -1000px;",
                 fb = "CSS1Compat",
                 gb = "<!doctype html>",
@@ -1413,8 +1049,7 @@ try {
                 Jb = "img",
                 Kb = "clear.cache.gif",
                 Lb = "baseUrl",
-                Mb =
-                  "ru.cdev.xnext.legacyfrontendstub.LegacyFrontendStub.nocache.js",
+                Mb = "ru.cdev.xnext.legacyfrontendstub.LegacyFrontendStub.nocache.js",
                 Nb = "base",
                 Ob = "//",
                 Pb = "user.agent",
@@ -1437,13 +1072,12 @@ try {
                 ec = 3,
                 fc = 4,
                 gc = "selectingPermutation",
-                hc =
-                  "ru.cdev.xnext.legacyfrontendstub.LegacyFrontendStub.devmode.js",
-                ic = "41C1A9B05CCAE8AFCE6CD7540E7D0CE7",
-                jc = "8C21C81DFD11158996E243FB4965F75E",
-                kc = "A3F6FB37FB6460FECCEAD8A01A961385",
-                lc = "C192131EE54EFA5E09210B4FADB2D56E",
-                mc = "D6DA592A1E5F96C0B536583E83D11BF4",
+                hc = "ru.cdev.xnext.legacyfrontendstub.LegacyFrontendStub.devmode.js",
+                ic = "20233A59BB6DAE7AFFA52A7150A5A335",
+                jc = "2AC553CA8D2DC0A5E202F1E81D0714FA",
+                kc = "5AB6BA00DF743496205F20C163585A80",
+                lc = "B1456968FEAA18E185344077EC088243",
+                mc = "E5AEC40BB263E68A55648FCEFB00FD13",
                 nc = ":",
                 oc = ".cache.js",
                 pc = "loadExternalRefs",
@@ -1452,8 +1086,7 @@ try {
                 sc = "https:",
                 tc = "file:",
                 uc = "_gwt_dummy_",
-                vc =
-                  "__gwtDevModeHook:ru.cdev.xnext.legacyfrontendstub.LegacyFrontendStub",
+                vc = "__gwtDevModeHook:ru.cdev.xnext.legacyfrontendstub.LegacyFrontendStub",
                 wc = "Ignoring non-whitelisted Dev Mode URL: ",
                 xc = ":moduleBase",
                 yc = "head",
@@ -1474,64 +1107,41 @@ try {
               }
               function s(a, b) {
                 if (p.__gwtStatsEvent) {
-                  p.__gwtStatsEvent({
-                    moduleName: Y,
-                    sessionId: p.__gwtStatsSessionId,
-                    subSystem: Z,
-                    evtGroup: a,
-                    millis: new Date().getTime(),
-                    type: b,
-                  });
+                  p.__gwtStatsEvent({ moduleName: Y, sessionId: p.__gwtStatsSessionId, subSystem: Z, evtGroup: a, millis: new Date().getTime(), type: b });
                 }
               }
-              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__sendStats =
-                s;
-              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__moduleName =
-                Y;
-              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__errFn =
-                null;
-              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__moduleBase =
-                $;
-              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__softPermutationId =
-                _;
-              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__computePropValue =
-                null;
-              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__getPropMap =
-                null;
-              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__installRunAsyncCode =
-                function () {};
-              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__gwtStartLoadingFragment =
-                function () {
-                  return null;
-                };
-              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__gwt_isKnownPropertyValue =
-                function () {
-                  return false;
-                };
-              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__gwt_getMetaProperty =
-                function () {
-                  return null;
-                };
+              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__sendStats = s;
+              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__moduleName = Y;
+              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__errFn = null;
+              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__moduleBase = $;
+              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__softPermutationId = _;
+              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__computePropValue = null;
+              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__getPropMap = null;
+              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__installRunAsyncCode = function () {};
+              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__gwtStartLoadingFragment = function () {
+                return null;
+              };
+              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__gwt_isKnownPropertyValue = function () {
+                return false;
+              };
+              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__gwt_getMetaProperty = function () {
+                return null;
+              };
               var t = null;
               var u = (p.__gwt_activeModules = p.__gwt_activeModules || {});
               u[Y] = { moduleName: Y };
-              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__moduleStartupDone =
-                function (e) {
-                  var f = u[Y].bindings;
-                  u[Y].bindings = function () {
-                    var a = f ? f() : {};
-                    var b =
-                      e[
-                        ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub
-                          .__softPermutationId
-                      ];
-                    for (var c = _; c < b.length; c++) {
-                      var d = b[c];
-                      a[d[_]] = d[ab];
-                    }
-                    return a;
-                  };
+              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__moduleStartupDone = function (e) {
+                var f = u[Y].bindings;
+                u[Y].bindings = function () {
+                  var a = f ? f() : {};
+                  var b = e[ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__softPermutationId];
+                  for (var c = _; c < b.length; c++) {
+                    var d = b[c];
+                    a[d[_]] = d[ab];
+                  }
+                  return a;
                 };
+              };
               var v;
               function w() {
                 B();
@@ -1600,14 +1210,9 @@ try {
                   }
                   d.language = ob;
                   d.src = a;
-                  if (
-                    ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__errFn
-                  ) {
+                  if (ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__errFn) {
                     d.onerror = function () {
-                      ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__errFn(
-                        pb,
-                        new Error(qb + a)
-                      );
+                      ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__errFn(pb, new Error(qb + a));
                     };
                   }
                   c.appendChild(d);
@@ -1626,14 +1231,9 @@ try {
                   d.language = ob;
                   d.src = a;
                   d.async = true;
-                  if (
-                    ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__errFn
-                  ) {
+                  if (ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__errFn) {
                     d.onerror = function () {
-                      ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__errFn(
-                        pb,
-                        new Error(qb + a)
-                      );
+                      ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__errFn(pb, new Error(qb + a));
                     };
                   }
                   c.appendChild(d);
@@ -1642,23 +1242,21 @@ try {
                 s(rb, tb);
                 f(e);
               }
-              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__startLoadingFragment =
-                function (a) {
-                  return H(a);
-                };
-              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__installRunAsyncCode =
-                function (a) {
-                  var b = w();
-                  var c = b.body;
-                  var d = b.createElement(mb);
-                  if (typeof ecwid_addCspNonceToScript === nb) {
-                    ecwid_addCspNonceToScript(d);
-                  }
-                  d.language = ob;
-                  d.text = a;
-                  c.appendChild(d);
-                  c.removeChild(d);
-                };
+              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__startLoadingFragment = function (a) {
+                return H(a);
+              };
+              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__installRunAsyncCode = function (a) {
+                var b = w();
+                var c = b.body;
+                var d = b.createElement(mb);
+                if (typeof ecwid_addCspNonceToScript === nb) {
+                  ecwid_addCspNonceToScript(d);
+                }
+                d.language = ob;
+                d.text = a;
+                c.appendChild(d);
+                c.removeChild(d);
+              };
               function F() {
                 var c = {};
                 var d;
@@ -1766,10 +1364,7 @@ try {
                 }
                 function k() {
                   var a = q.location;
-                  return (
-                    a.href ==
-                    a.protocol + Ob + a.host + a.pathname + a.search + a.hash
-                  );
+                  return a.href == a.protocol + Ob + a.host + a.pathname + a.search + a.hash;
                 }
                 var l = g();
                 if (l == hb) {
@@ -1791,10 +1386,7 @@ try {
                 if (a.match(/^[a-zA-Z]+:\/\//)) {
                   return a;
                 }
-                return (
-                  ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__moduleBase +
-                  a
-                );
+                return ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__moduleBase + a;
               }
               function I() {
                 var f = [];
@@ -1834,10 +1426,7 @@ try {
                     return Rb;
                   if (
                     (function () {
-                      return (
-                        (a.indexOf(Sb) != -1 && b >= lb && b < Tb) ||
-                        a.indexOf(Ub) != -1
-                      );
+                      return (a.indexOf(Sb) != -1 && b >= lb && b < Tb) || a.indexOf(Ub) != -1;
                     })()
                   )
                     return Vb;
@@ -1849,19 +1438,13 @@ try {
                     return Xb;
                   if (
                     (function () {
-                      return (
-                        a.indexOf(Yb) != -1 ||
-                        a.indexOf(Zb) != -1 ||
-                        (a.indexOf(Sb) != -1 && b >= $b && b < Tb)
-                      );
+                      return a.indexOf(Yb) != -1 || a.indexOf(Zb) != -1 || (a.indexOf(Sb) != -1 && b >= $b && b < Tb);
                     })()
                   )
                     return _b;
                   if (
                     (function () {
-                      return (
-                        a.indexOf(ac) != -1 || b >= Tb || a.indexOf(bc) != -1
-                      );
+                      return a.indexOf(ac) != -1 || b >= Tb || a.indexOf(bc) != -1;
                     })()
                   )
                     return cc;
@@ -1871,20 +1454,17 @@ try {
                 __gwt_isKnownPropertyValue = function (a, b) {
                   return b in j[a];
                 };
-                ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__getPropMap =
-                  function () {
-                    var a = {};
-                    for (var b in j) {
-                      if (j.hasOwnProperty(b)) {
-                        a[b] = l(b);
-                      }
+                ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__getPropMap = function () {
+                  var a = {};
+                  for (var b in j) {
+                    if (j.hasOwnProperty(b)) {
+                      a[b] = l(b);
                     }
-                    return a;
-                  };
-                ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__computePropValue =
-                  l;
-                p.__gwt_activeModules[Y].bindings =
-                  ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__getPropMap;
+                  }
+                  return a;
+                };
+                ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__computePropValue = l;
+                p.__gwt_activeModules[Y].bindings = ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__getPropMap;
                 s(U, gc);
                 if (r()) {
                   return H(hc);
@@ -1903,8 +1483,7 @@ try {
                     m = m.substring(_, n);
                   }
                 } catch (a) {}
-                ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__softPermutationId =
-                  g;
+                ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__softPermutationId = g;
                 return H(m + oc);
               }
               function J() {
@@ -1915,17 +1494,11 @@ try {
                 s(pc, qc);
               }
               F();
-              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__moduleBase =
-                G();
-              u[Y].moduleBase =
-                ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__moduleBase;
+              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__moduleBase = G();
+              u[Y].moduleBase = ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__moduleBase;
               var K = I();
               if (p) {
-                var L = !!(
-                  p.location.protocol == rc ||
-                  p.location.protocol == sc ||
-                  p.location.protocol == tc
-                );
+                var L = !!(p.location.protocol == rc || p.location.protocol == sc || p.location.protocol == tc);
                 p.__gwt_activeModules[Y].canRedirect = L;
                 function M() {
                   var b = uc;
@@ -1965,11 +1538,7 @@ try {
                   if (!c) {
                     clearInterval(d);
                   } else {
-                    var a = document
-                      .getElementById(
-                        ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__moduleName
-                      )
-                      .contentWindow.document.getElementsByTagName(mb);
+                    var a = document.getElementById(ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__moduleName).contentWindow.document.getElementsByTagName(mb);
                     if (a.length !== _ && a[_].hasAttribute(Ac)) {
                       clearInterval(d);
                       b();
@@ -1984,11 +1553,7 @@ try {
                   if (!c) {
                     clearInterval(d);
                   } else {
-                    var a = document
-                      .getElementById(
-                        ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__moduleName
-                      )
-                      .contentWindow.document.getElementsByTagName(mb);
+                    var a = document.getElementById(ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__moduleName).contentWindow.document.getElementsByTagName(mb);
                     if (a.length === _ || !a[_].hasAttribute(Ac)) {
                       clearInterval(d);
                       b();
@@ -1998,21 +1563,13 @@ try {
                 }, Dc);
               }
               function T() {
-                document
-                  .getElementById(
-                    ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__moduleName
-                  )
-                  .remove();
+                document.getElementById(ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.__moduleName).remove();
                 var b = document.getElementsByClassName(Ec);
                 if (b[_] !== undefined) {
                   b[_].remove();
                 }
                 A();
-                for (
-                  i = _;
-                  i < window._xnext_initialization_scripts.length;
-                  i++
-                ) {
+                for (i = _; i < window._xnext_initialization_scripts.length; i++) {
                   var c = window._xnext_initialization_scripts[i];
                   var d = c.id;
                   var e = c.arg;
@@ -2044,8 +1601,7 @@ try {
               }
               return true;
             };
-            ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.succeeded =
-              ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub();
+            ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub.succeeded = ru_cdev_xnext_legacyfrontendstub_LegacyFrontendStub();
             // ========================= STUBBED NOCACHE END ===========================
           } else {
             // ========================= FULL NOCACHE BEGIN =========================
@@ -2061,8 +1617,7 @@ try {
                 ab = 1,
                 bb = "iframe",
                 cb = "fitvidsignore",
-                db =
-                  "position:absolute; width:0; height:0; border:none; left: -1000px;",
+                db = "position:absolute; width:0; height:0; border:none; left: -1000px;",
                 eb = " top: -1000px;",
                 fb = "CSS1Compat",
                 gb = "<!doctype html>",
@@ -2121,11 +1676,11 @@ try {
                 fc = 4,
                 gc = "selectingPermutation",
                 hc = "ru.cdev.xnext.legacyfrontend.LegacyFrontend.devmode.js",
-                ic = "435AFBEB1B83425519847CC40F884D7F",
-                jc = "4FA2C12C20FA5DCB12278763A454B2EB",
-                kc = "7592486B9D5C1A3E1309E5A800B9967E",
-                lc = "814AB05E028D5AE2372793ADB537DF6A",
-                mc = "9540607E186296C1CFEEBAC792D8B0FB",
+                ic = "BD22FD4397E5DD4C2FACC6DEC0727EB3",
+                jc = "BF2C4D7FEE7ADC1538BB51721D671E53",
+                kc = "E678F6A4CD09F0474BE92505DBD04B6F",
+                lc = "ED6CE37DE07D0B5EEB8F5437206E2443",
+                mc = "F62E4AB299EBF1B4262ECB008D7A95FE",
                 nc = ":",
                 oc = ".cache.js",
                 pc = "loadExternalRefs",
@@ -2134,8 +1689,7 @@ try {
                 sc = "https:",
                 tc = "file:",
                 uc = "_gwt_dummy_",
-                vc =
-                  "__gwtDevModeHook:ru.cdev.xnext.legacyfrontend.LegacyFrontend",
+                vc = "__gwtDevModeHook:ru.cdev.xnext.legacyfrontend.LegacyFrontend",
                 wc = "Ignoring non-whitelisted Dev Mode URL: ",
                 xc = ":moduleBase",
                 yc = "head",
@@ -2156,59 +1710,41 @@ try {
               }
               function s(a, b) {
                 if (p.__gwtStatsEvent) {
-                  p.__gwtStatsEvent({
-                    moduleName: Y,
-                    sessionId: p.__gwtStatsSessionId,
-                    subSystem: Z,
-                    evtGroup: a,
-                    millis: new Date().getTime(),
-                    type: b,
-                  });
+                  p.__gwtStatsEvent({ moduleName: Y, sessionId: p.__gwtStatsSessionId, subSystem: Z, evtGroup: a, millis: new Date().getTime(), type: b });
                 }
               }
               ru_cdev_xnext_legacyfrontend_LegacyFrontend.__sendStats = s;
               ru_cdev_xnext_legacyfrontend_LegacyFrontend.__moduleName = Y;
               ru_cdev_xnext_legacyfrontend_LegacyFrontend.__errFn = null;
               ru_cdev_xnext_legacyfrontend_LegacyFrontend.__moduleBase = $;
-              ru_cdev_xnext_legacyfrontend_LegacyFrontend.__softPermutationId =
-                _;
-              ru_cdev_xnext_legacyfrontend_LegacyFrontend.__computePropValue =
-                null;
+              ru_cdev_xnext_legacyfrontend_LegacyFrontend.__softPermutationId = _;
+              ru_cdev_xnext_legacyfrontend_LegacyFrontend.__computePropValue = null;
               ru_cdev_xnext_legacyfrontend_LegacyFrontend.__getPropMap = null;
-              ru_cdev_xnext_legacyfrontend_LegacyFrontend.__installRunAsyncCode =
-                function () {};
-              ru_cdev_xnext_legacyfrontend_LegacyFrontend.__gwtStartLoadingFragment =
-                function () {
-                  return null;
-                };
-              ru_cdev_xnext_legacyfrontend_LegacyFrontend.__gwt_isKnownPropertyValue =
-                function () {
-                  return false;
-                };
-              ru_cdev_xnext_legacyfrontend_LegacyFrontend.__gwt_getMetaProperty =
-                function () {
-                  return null;
-                };
+              ru_cdev_xnext_legacyfrontend_LegacyFrontend.__installRunAsyncCode = function () {};
+              ru_cdev_xnext_legacyfrontend_LegacyFrontend.__gwtStartLoadingFragment = function () {
+                return null;
+              };
+              ru_cdev_xnext_legacyfrontend_LegacyFrontend.__gwt_isKnownPropertyValue = function () {
+                return false;
+              };
+              ru_cdev_xnext_legacyfrontend_LegacyFrontend.__gwt_getMetaProperty = function () {
+                return null;
+              };
               var t = null;
               var u = (p.__gwt_activeModules = p.__gwt_activeModules || {});
               u[Y] = { moduleName: Y };
-              ru_cdev_xnext_legacyfrontend_LegacyFrontend.__moduleStartupDone =
-                function (e) {
-                  var f = u[Y].bindings;
-                  u[Y].bindings = function () {
-                    var a = f ? f() : {};
-                    var b =
-                      e[
-                        ru_cdev_xnext_legacyfrontend_LegacyFrontend
-                          .__softPermutationId
-                      ];
-                    for (var c = _; c < b.length; c++) {
-                      var d = b[c];
-                      a[d[_]] = d[ab];
-                    }
-                    return a;
-                  };
+              ru_cdev_xnext_legacyfrontend_LegacyFrontend.__moduleStartupDone = function (e) {
+                var f = u[Y].bindings;
+                u[Y].bindings = function () {
+                  var a = f ? f() : {};
+                  var b = e[ru_cdev_xnext_legacyfrontend_LegacyFrontend.__softPermutationId];
+                  for (var c = _; c < b.length; c++) {
+                    var d = b[c];
+                    a[d[_]] = d[ab];
+                  }
+                  return a;
                 };
+              };
               var v;
               function w() {
                 B();
@@ -2279,10 +1815,7 @@ try {
                   d.src = a;
                   if (ru_cdev_xnext_legacyfrontend_LegacyFrontend.__errFn) {
                     d.onerror = function () {
-                      ru_cdev_xnext_legacyfrontend_LegacyFrontend.__errFn(
-                        pb,
-                        new Error(qb + a)
-                      );
+                      ru_cdev_xnext_legacyfrontend_LegacyFrontend.__errFn(pb, new Error(qb + a));
                     };
                   }
                   c.appendChild(d);
@@ -2303,10 +1836,7 @@ try {
                   d.async = true;
                   if (ru_cdev_xnext_legacyfrontend_LegacyFrontend.__errFn) {
                     d.onerror = function () {
-                      ru_cdev_xnext_legacyfrontend_LegacyFrontend.__errFn(
-                        pb,
-                        new Error(qb + a)
-                      );
+                      ru_cdev_xnext_legacyfrontend_LegacyFrontend.__errFn(pb, new Error(qb + a));
                     };
                   }
                   c.appendChild(d);
@@ -2315,23 +1845,21 @@ try {
                 s(rb, tb);
                 f(e);
               }
-              ru_cdev_xnext_legacyfrontend_LegacyFrontend.__startLoadingFragment =
-                function (a) {
-                  return H(a);
-                };
-              ru_cdev_xnext_legacyfrontend_LegacyFrontend.__installRunAsyncCode =
-                function (a) {
-                  var b = w();
-                  var c = b.body;
-                  var d = b.createElement(mb);
-                  if (typeof ecwid_addCspNonceToScript === nb) {
-                    ecwid_addCspNonceToScript(d);
-                  }
-                  d.language = ob;
-                  d.text = a;
-                  c.appendChild(d);
-                  c.removeChild(d);
-                };
+              ru_cdev_xnext_legacyfrontend_LegacyFrontend.__startLoadingFragment = function (a) {
+                return H(a);
+              };
+              ru_cdev_xnext_legacyfrontend_LegacyFrontend.__installRunAsyncCode = function (a) {
+                var b = w();
+                var c = b.body;
+                var d = b.createElement(mb);
+                if (typeof ecwid_addCspNonceToScript === nb) {
+                  ecwid_addCspNonceToScript(d);
+                }
+                d.language = ob;
+                d.text = a;
+                c.appendChild(d);
+                c.removeChild(d);
+              };
               function F() {
                 var c = {};
                 var d;
@@ -2439,10 +1967,7 @@ try {
                 }
                 function k() {
                   var a = q.location;
-                  return (
-                    a.href ==
-                    a.protocol + Ob + a.host + a.pathname + a.search + a.hash
-                  );
+                  return a.href == a.protocol + Ob + a.host + a.pathname + a.search + a.hash;
                 }
                 var l = g();
                 if (l == hb) {
@@ -2464,9 +1989,7 @@ try {
                 if (a.match(/^[a-zA-Z]+:\/\//)) {
                   return a;
                 }
-                return (
-                  ru_cdev_xnext_legacyfrontend_LegacyFrontend.__moduleBase + a
-                );
+                return ru_cdev_xnext_legacyfrontend_LegacyFrontend.__moduleBase + a;
               }
               function I() {
                 var f = [];
@@ -2506,10 +2029,7 @@ try {
                     return Rb;
                   if (
                     (function () {
-                      return (
-                        (a.indexOf(Sb) != -1 && b >= lb && b < Tb) ||
-                        a.indexOf(Ub) != -1
-                      );
+                      return (a.indexOf(Sb) != -1 && b >= lb && b < Tb) || a.indexOf(Ub) != -1;
                     })()
                   )
                     return Vb;
@@ -2521,19 +2041,13 @@ try {
                     return Xb;
                   if (
                     (function () {
-                      return (
-                        a.indexOf(Yb) != -1 ||
-                        a.indexOf(Zb) != -1 ||
-                        (a.indexOf(Sb) != -1 && b >= $b && b < Tb)
-                      );
+                      return a.indexOf(Yb) != -1 || a.indexOf(Zb) != -1 || (a.indexOf(Sb) != -1 && b >= $b && b < Tb);
                     })()
                   )
                     return _b;
                   if (
                     (function () {
-                      return (
-                        a.indexOf(ac) != -1 || b >= Tb || a.indexOf(bc) != -1
-                      );
+                      return a.indexOf(ac) != -1 || b >= Tb || a.indexOf(bc) != -1;
                     })()
                   )
                     return cc;
@@ -2543,31 +2057,28 @@ try {
                 __gwt_isKnownPropertyValue = function (a, b) {
                   return b in j[a];
                 };
-                ru_cdev_xnext_legacyfrontend_LegacyFrontend.__getPropMap =
-                  function () {
-                    var a = {};
-                    for (var b in j) {
-                      if (j.hasOwnProperty(b)) {
-                        a[b] = l(b);
-                      }
+                ru_cdev_xnext_legacyfrontend_LegacyFrontend.__getPropMap = function () {
+                  var a = {};
+                  for (var b in j) {
+                    if (j.hasOwnProperty(b)) {
+                      a[b] = l(b);
                     }
-                    return a;
-                  };
-                ru_cdev_xnext_legacyfrontend_LegacyFrontend.__computePropValue =
-                  l;
-                p.__gwt_activeModules[Y].bindings =
-                  ru_cdev_xnext_legacyfrontend_LegacyFrontend.__getPropMap;
+                  }
+                  return a;
+                };
+                ru_cdev_xnext_legacyfrontend_LegacyFrontend.__computePropValue = l;
+                p.__gwt_activeModules[Y].bindings = ru_cdev_xnext_legacyfrontend_LegacyFrontend.__getPropMap;
                 s(U, gc);
                 if (r()) {
                   return H(hc);
                 }
                 var m;
                 try {
-                  h([Rb], ic);
-                  h([Vb], jc);
-                  h([cc], kc);
-                  h([_b], lc);
-                  h([Xb], mc);
+                  h([cc], ic);
+                  h([Rb], jc);
+                  h([_b], kc);
+                  h([Xb], lc);
+                  h([Vb], mc);
                   m = f[l(Pb)];
                   var n = m.indexOf(nc);
                   if (n != -1) {
@@ -2575,8 +2086,7 @@ try {
                     m = m.substring(_, n);
                   }
                 } catch (a) {}
-                ru_cdev_xnext_legacyfrontend_LegacyFrontend.__softPermutationId =
-                  g;
+                ru_cdev_xnext_legacyfrontend_LegacyFrontend.__softPermutationId = g;
                 return H(m + oc);
               }
               function J() {
@@ -2588,15 +2098,10 @@ try {
               }
               F();
               ru_cdev_xnext_legacyfrontend_LegacyFrontend.__moduleBase = G();
-              u[Y].moduleBase =
-                ru_cdev_xnext_legacyfrontend_LegacyFrontend.__moduleBase;
+              u[Y].moduleBase = ru_cdev_xnext_legacyfrontend_LegacyFrontend.__moduleBase;
               var K = I();
               if (p) {
-                var L = !!(
-                  p.location.protocol == rc ||
-                  p.location.protocol == sc ||
-                  p.location.protocol == tc
-                );
+                var L = !!(p.location.protocol == rc || p.location.protocol == sc || p.location.protocol == tc);
                 p.__gwt_activeModules[Y].canRedirect = L;
                 function M() {
                   var b = uc;
@@ -2636,11 +2141,7 @@ try {
                   if (!c) {
                     clearInterval(d);
                   } else {
-                    var a = document
-                      .getElementById(
-                        ru_cdev_xnext_legacyfrontend_LegacyFrontend.__moduleName
-                      )
-                      .contentWindow.document.getElementsByTagName(mb);
+                    var a = document.getElementById(ru_cdev_xnext_legacyfrontend_LegacyFrontend.__moduleName).contentWindow.document.getElementsByTagName(mb);
                     if (a.length !== _ && a[_].hasAttribute(Ac)) {
                       clearInterval(d);
                       b();
@@ -2655,11 +2156,7 @@ try {
                   if (!c) {
                     clearInterval(d);
                   } else {
-                    var a = document
-                      .getElementById(
-                        ru_cdev_xnext_legacyfrontend_LegacyFrontend.__moduleName
-                      )
-                      .contentWindow.document.getElementsByTagName(mb);
+                    var a = document.getElementById(ru_cdev_xnext_legacyfrontend_LegacyFrontend.__moduleName).contentWindow.document.getElementsByTagName(mb);
                     if (a.length === _ || !a[_].hasAttribute(Ac)) {
                       clearInterval(d);
                       b();
@@ -2669,21 +2166,13 @@ try {
                 }, Dc);
               }
               function T() {
-                document
-                  .getElementById(
-                    ru_cdev_xnext_legacyfrontend_LegacyFrontend.__moduleName
-                  )
-                  .remove();
+                document.getElementById(ru_cdev_xnext_legacyfrontend_LegacyFrontend.__moduleName).remove();
                 var b = document.getElementsByClassName(Ec);
                 if (b[_] !== undefined) {
                   b[_].remove();
                 }
                 A();
-                for (
-                  i = _;
-                  i < window._xnext_initialization_scripts.length;
-                  i++
-                ) {
+                for (i = _; i < window._xnext_initialization_scripts.length; i++) {
                   var c = window._xnext_initialization_scripts[i];
                   var d = c.id;
                   var e = c.arg;
@@ -2715,8 +2204,7 @@ try {
               }
               return true;
             };
-            ru_cdev_xnext_legacyfrontend_LegacyFrontend.succeeded =
-              ru_cdev_xnext_legacyfrontend_LegacyFrontend();
+            ru_cdev_xnext_legacyfrontend_LegacyFrontend.succeeded = ru_cdev_xnext_legacyfrontend_LegacyFrontend();
             // ========================= FULL NOCACHE END ===========================
           }
           if (!Ecwid._isInteractiveEnabled()) {
@@ -2728,11 +2216,7 @@ try {
       _legacyAfterBodyDone: function () {
         window.ecwid_script_defer = true;
         if (document.removeEventListener) {
-          document.removeEventListener(
-            "DOMContentLoaded",
-            Ecwid._onBodyDone,
-            false
-          );
+          document.removeEventListener("DOMContentLoaded", Ecwid._onBodyDone, false);
         }
         if (window.ecwid_onBodyDoneTimerId) {
           clearInterval(window.ecwid_onBodyDoneTimerId);
@@ -2752,11 +2236,7 @@ try {
           "message",
           function (event) {
             var ae = document.activeElement;
-            if (
-              event.data === "iosIframeFocus" &&
-              ae &&
-              ae.tagName.toLowerCase() !== "iframe"
-            ) {
+            if (event.data === "iosIframeFocus" && ae && ae.tagName.toLowerCase() !== "iframe") {
               ae.blur();
             }
           },
@@ -2771,13 +2251,8 @@ try {
             if (!EcwidUtils.localStorageSupported()) {
               calculationResult = [];
             } else {
-              var disabledApps =
-                window.localStorage.getItem("ec_disabled_apps");
-              if (
-                disabledApps === null ||
-                disabledApps === "none" ||
-                disabledApps === ""
-              ) {
+              var disabledApps = window.localStorage.getItem("ec_disabled_apps");
+              if (disabledApps === null || disabledApps === "none" || disabledApps === "") {
                 calculationResult = [];
               } else if (disabledApps === "all") {
                 calculationResult = "all";
@@ -2798,10 +2273,7 @@ try {
         var disabledAppSetting = Ecwid._getDisabledAppsSetting();
         if (disabledAppSetting === "all") {
           return false;
-        } else if (
-          Object.prototype.toString.call(disabledAppSetting) ===
-          "[object Array]"
-        ) {
+        } else if (Object.prototype.toString.call(disabledAppSetting) === "[object Array]") {
           return disabledAppSetting.indexOf(namespace) == -1;
         }
         return true;
@@ -2831,15 +2303,8 @@ try {
         var config = (window.ec || {}).storefront || {};
         var newStorefrontOnly = true;
         var newStorefrontOnlyIfForced = true;
-        var newStorefrontForcedByEcSettings =
-          !!config.enable_new_checkout &&
-          !!config.enable_new_product_details &&
-          !!config.enable_new_product_list &&
-          !!config.enable_new_shopping_cart;
-        return (
-          newStorefrontOnly ||
-          (newStorefrontOnlyIfForced && newStorefrontForcedByEcSettings)
-        );
+        var newStorefrontForcedByEcSettings = !!config.enable_new_checkout && !!config.enable_new_product_details && !!config.enable_new_product_list && !!config.enable_new_shopping_cart;
+        return newStorefrontOnly || (newStorefrontOnlyIfForced && newStorefrontForcedByEcSettings);
       },
     };
     var EcwidUtils = (function () {
@@ -2865,10 +2330,7 @@ try {
     })();
     var EcwidLogger = (function () {
       function _needToShowLog() {
-        if (
-          EcwidUtils.localStorageSupported() &&
-          window.localStorage.getItem("show_ec_logs") === "true"
-        ) {
+        if (EcwidUtils.localStorageSupported() && window.localStorage.getItem("show_ec_logs") === "true") {
           return true;
         }
         return false;
@@ -2891,13 +2353,9 @@ try {
     window.needLoadEcwidAsync = Ecwid._isInteractiveEnabled(); //need for async loading in gwt library
     window.allowGWTAppResurrection = false;
     if (!Ecwid._isNewStorefrontOnly()) {
-      xInjectJs(
-        "https://d2scn539ulxr09.cloudfront.net/static/br/2022-6275-g7303a656280/lang/fr.js"
-      );
+      xInjectJs("https://d2scn539ulxr09.cloudfront.net/static/br/2022-24329-ge1a978379bb/lang/fr.js");
     }
-    xInjectJs(
-      "https://d3dq8sxcny4hg.cloudfront.net/states.js?version=2022-6275-g7303a656280&callback=window.ecwid_states_data.loaded"
-    );
+    xInjectJs("https://d3dq8sxcny4hg.cloudfront.net/states.js?version=2022-24329-ge1a978379bb&callback=window.ecwid_states_data.loaded");
     if (window.top != window && document.referrer) {
       var hash_position = document.referrer.lastIndexOf("#!/");
       if (hash_position == -1) {
@@ -2910,16 +2368,12 @@ try {
         var loc = window.location.href;
         if (loc.indexOf("#") == -1) window.location.replace(loc + hash);
         else {
-          if (loc.substr(loc.indexOf("#")) != hash)
-            window.location.replace(loc.substr(0, loc.indexOf("#")) + hash);
+          if (loc.substr(loc.indexOf("#")) != hash) window.location.replace(loc.substr(0, loc.indexOf("#")) + hash);
         }
       }
       if (typeof ecwid_history_token != "undefined") {
         var loc = window.location.href;
-        if (hash_position != -1)
-          window.location.replace(
-            loc.substr(0, loc.indexOf("#")) + ecwid_history_token
-          );
+        if (hash_position != -1) window.location.replace(loc.substr(0, loc.indexOf("#")) + ecwid_history_token);
         else window.location.replace(loc + "#" + ecwid_history_token);
       }
     }
@@ -2953,24 +2407,18 @@ try {
         }
       }
     }
-    window.css_selectors_prefix = encodeURIComponent(
-      window.css_selectors_prefix
-    );
-    window.ecwid_script_base =
-      "https://d2scn539ulxr09.cloudfront.net/static/br/2022-6275-g7303a656280/";
+    window.css_selectors_prefix = encodeURIComponent(window.css_selectors_prefix);
+    window.ecwid_script_base = "https://d2scn539ulxr09.cloudfront.net/static/br/2022-24329-ge1a978379bb/";
     window.ecwid_url = "https://app.store.yola.com/";
     window.ecwid_wait_for_interactive_seconds = 5;
     window.ecwid_use_new_loader = false;
-    window.ecwid_loader_logo_url =
-      "https://d1dkdnyvras0l5.cloudfront.net/yolastore/loading_new.gif";
+    window.ecwid_loader_logo_url = "https://d1dkdnyvras0l5.cloudfront.net/yolastore/loading_new.gif";
     if (!window.amazon_image_domain) {
       window.amazon_image_domain = "https://d2j6dbq0eux0bg.cloudfront.net";
     }
     window.xnext_ownerId = 55818003;
-    (window.Ecwid.publicToken = "public_TBNYMhwqXCJm9fHrqYeiYE3eDW98f6q5"),
-      (window.Ecwid.demo = false);
-    window.Ecwid.cssUrl =
-      "https://d1oxsl77a1kjht.cloudfront.net/css/new?hc=-234063976&ownerid=55818003&useProximaNovaFont=true";
+    (window.Ecwid.publicToken = "public_8XcVg1yuxxewpSEffPxYhHMM1QN2t4ja"), (window.Ecwid.demo = false);
+    window.Ecwid.cssUrl = "https://d1oxsl77a1kjht.cloudfront.net/css/new?hc=1663062571&ownerid=55818003&useProximaNovaFont=true";
     window.Ecwid.acceptLanguage = ["fr"];
     window.Ecwid.appDomain = "https://app.store.yola.com/";
     window.Ecwid.startup_flags = {
@@ -2985,8 +2433,7 @@ try {
     (function () {
       window.ecwid_initial_data = {};
       window.ecwid_initial_data.data = window.ecwid_initial_data.data || {};
-      window.ecwid_initial_data.refetchedInitialData =
-        window.ecwid_initial_data.refetchedInitialData || {};
+      window.ecwid_initial_data.refetchedInitialData = window.ecwid_initial_data.refetchedInitialData || {};
       window.ecwid_initial_data.init = false;
       window.ecwid_initial_data.consume = consume;
       window.ecwid_initial_data.consumeRefetch = consumeRefetch;
@@ -3003,17 +2450,15 @@ try {
         window.ecwid_initial_data = window.ecwid_initial_data || {};
         window.ecwid_initial_data.data = window.ecwid_initial_data.data || {};
         window.ecwid_initial_data.data.storeClosed = data.storeClosed;
+        window.ecwid_initial_data.data.storeIsBlockedDueToFraud = data.storeIsBlockedDueToFraud;
         window.ecwid_initial_data.data.storeConfig = data.storeConfig;
         window.ecwid_initial_data.data.categories = data.categories;
       }
-      var ecDataJsBaseUrl =
-        "https://app.store.yola.com/data.js?ownerid=55818003";
+      var ecDataJsBaseUrl = "https://app.store.yola.com/data.js?ownerid=55818003";
       if (isStorefrontTranslationsEnabled()) {
         ecDataJsBaseUrl += "&lang=fr";
       }
-      xInjectJs(
-        ecDataJsBaseUrl + "&callback=window.ecwid_initial_data.data.doInit"
-      );
+      xInjectJs(ecDataJsBaseUrl + "&callback=window.ecwid_initial_data.data.doInit");
       function consume(callback) {
         window.ecwidEvents.bind("INITIAL_DATA_LOADED", callback);
         if (window.ecwid_initial_data.init) {
@@ -3022,10 +2467,7 @@ try {
       }
       function consumeRefetch(callback) {
         window.ecwidEvents.bind("INITIAL_DATA_REFETCHED", callback);
-        xInjectJs(
-          ecDataJsBaseUrl +
-            "&callback=window.ecwid_initial_data.data.refetchInitialData"
-        );
+        xInjectJs(ecDataJsBaseUrl + "&callback=window.ecwid_initial_data.data.refetchInitialData");
       }
     })();
     (function () {
@@ -3044,9 +2486,7 @@ try {
       };
     })();
     window.Ecwid.getAppPublicToken = function (namespace) {
-      var tokenMap = {
-        "ecwid-storefront": "public_TBNYMhwqXCJm9fHrqYeiYE3eDW98f6q5",
-      };
+      var tokenMap = { "ecwid-storefront": "public_HE4ryAaPvzbye53VYpdiu6dJaG1AF56w" };
       var result = tokenMap[namespace];
       return typeof result === "string" ? result : null;
       return null;
@@ -3056,10 +2496,7 @@ try {
     } else {
       Ecwid._loadEcwidSync();
     }
-    if (
-      !window.__heap_inits__ &&
-      !(((window.ec || {}).config || {}).disable_all_cookies === true)
-    ) {
+    if (!window.__heap_inits__ && !(((window.ec || {}).config || {}).disable_all_cookies === true)) {
       (function (i, s, o, g, r, a, m) {
         i["HeapAnalyticsObject"] = r;
         (i[r] =
@@ -3071,18 +2508,12 @@ try {
         (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
         a.async = 1;
         a.src = g;
-        if (Ecwid._isInteractiveEnabled() && m != null && m.parentNode != null)
-          m.parentNode.insertBefore(a, m);
+        if (Ecwid._isInteractiveEnabled() && m != null && m.parentNode != null) m.parentNode.insertBefore(a, m);
         else
           var h = 100,
             k = setInterval(function () {
               m = s.getElementsByTagName(o)[0];
-              if (
-                (/loaded|complete/.test(s.readyState) || 0 == h--) &&
-                m != null &&
-                m.parentNode != null
-              )
-                m.parentNode.insertBefore(a, m), clearInterval(k);
+              if ((/loaded|complete/.test(s.readyState) || 0 == h--) && m != null && m.parentNode != null) m.parentNode.insertBefore(a, m), clearInterval(k);
             }, 100);
       })(window, document, "script", "https://ecomm.events/i.js", "eca");
       window.__heap_inits__ = true;
@@ -3105,8 +2536,7 @@ try {
           var str = args[i].substr(stylePrefix.length);
           str = str.replace(/^ +\'?/, "").replace(/\'? +$/, "");
           if (str.substring(0, 1) == "'") str = str.substring(1);
-          if (str.substring(str.length - 1) == "'")
-            str = str.substring(0, str.length - 1);
+          if (str.substring(str.length - 1) == "'") str = str.substring(0, str.length - 1);
           style += str;
         }
       }
@@ -3153,10 +2583,7 @@ try {
         do {
           id = widgetType + "-" + i++;
         } while (document.getElementById(id));
-        if (
-          !!document.currentScript &&
-          !!document.currentScript.parentElement
-        ) {
+        if (!!document.currentScript && !!document.currentScript.parentElement) {
           var widgetElem = document.createElement("div");
           widgetElem.id = id;
           if (style) {
@@ -3192,11 +2619,7 @@ try {
         l = window._xnext_initialization_scripts.length;
       }
       EcwidLogger.log("Widget " + widgetType + " " + id + " added");
-      window._xnext_initialization_scripts[l] = {
-        widgetType: widgetType,
-        id: id,
-        arg: args,
-      };
+      window._xnext_initialization_scripts[l] = { widgetType: widgetType, id: id, arg: args };
       window.ecwid_dynamic_widgets && Ecwid._onBodyDone();
     }
     function xProductBrowser() {
@@ -3249,41 +2672,39 @@ try {
     }
     (function (w, undefined) {
       var injectRosettaRetry = 0;
-      function tryInjectRosettaScript(url) {
+      function tryInjectRosettaScript(cdnUrl, s3Url) {
+        injectRosettaRetry++;
+        var url = injectRosettaRetry < 5 ? cdnUrl : s3Url;
         var script = document.createElement("script");
         script.type = "text/javascript";
         script.onerror = function () {
           document.getElementsByTagName("head")[0].removeChild(script);
-          injectRosettaRetry++;
           if (injectRosettaRetry < 10) {
-            setTimeout(tryInjectRosettaScript.bind(this, url), 200);
+            setTimeout(tryInjectRosettaScript.bind(this, cdnUrl, s3Url), 200);
           } else {
-            // ретраи кончились, пошлем ошибку в ga, если он есть на странице
             if (!!window.ga) {
               window.ga("send", "exception", {
                 exDescription: "Translation with url " + url + " not loaded.",
                 exFatal: true,
               });
             }
-            console &&
-              console.error &&
-              console.error("Load translation failed: ", url);
+            console && console.error && console.error("Load translation failed: ", url);
+            window.ecwid_elm_config = window.ecwid_elm_config || {};
             window.ecwid_elm_config.translations_load_failed_url = url;
-            window.ecwidEvents.trigger("TRANSLATIONS_LOAD_FAILED", url);
+            if (!!window.ecwidEvents) {
+              window.ecwidEvents.trigger("TRANSLATIONS_LOAD_FAILED", url);
+            }
             if (!!window.Ecwid && !!window.Ecwid.logException) {
-              window.Ecwid.logException(
-                "Failed to load translations. Url: " +
-                  url +
-                  ". retry number: " +
-                  injectRosettaRetry
-              );
+              window.Ecwid.logException("Failed to load translations. Url: " + url + ". retry number: " + injectRosettaRetry);
             }
           }
         };
         script.onload = function () {
           window.ecwid_elm_config = window.ecwid_elm_config || {};
           window.ecwid_elm_config.translations_loaded = true;
-          window.ecwidEvents.trigger("TRANSLATIONS_LOADED");
+          if (!!window.ecwidEvents) {
+            window.ecwidEvents.trigger("TRANSLATIONS_LOADED");
+          }
         };
         script.src = url;
         document.getElementsByTagName("head")[0].appendChild(script);
@@ -3297,9 +2718,7 @@ try {
       function init() {
         var nodes = document.getElementsByClassName("ec-cart-widget");
         if (nodes.length > 0 && !isElmNeed() && !rosettaInjected) {
-          tryInjectRosettaScript(
-            "https://d2scn539ulxr09.cloudfront.net/rosetta/translations/new-frontend/files/new-frontend.fr.-989802046.js"
-          );
+          tryInjectRosettaScript("https://d2scn539ulxr09.cloudfront.net/rosetta/translations2022/new-frontend/files/new-frontend.fr.-738547582.js", "https://ecwid-rosetta.s3.amazonaws.com/translations2022/new-frontend/files/new-frontend.fr.-738547582.translations");
           rosettaInjected = true;
         }
         for (var i = 0; i < nodes.length; i++) {
@@ -3329,19 +2748,12 @@ try {
       }
       function addCartWidget() {
         let l = 0;
-        if (
-          typeof window._xnext_initialization_scripts == "undefined" ||
-          window._xnext_initialization_scripts == null
-        ) {
+        if (typeof window._xnext_initialization_scripts == "undefined" || window._xnext_initialization_scripts == null) {
           window._xnext_initialization_scripts = [];
         } else {
           l = window._xnext_initialization_scripts.length;
         }
-        window._xnext_initialization_scripts[l] = {
-          widgetType: "MinicartV2",
-          id: "",
-          arg: [],
-        };
+        window._xnext_initialization_scripts[l] = { widgetType: "MinicartV2", id: "", arg: [] };
       }
     })(window);
     function xAffiliate(id) {
@@ -3351,21 +2763,13 @@ try {
   }
 } catch (e) {
   function xReportError(msg) {
-    var html =
-      '<div style="font-family:sans-serif;"><div style="padding:30px 20px;max-width:500px;word-wrap: break-word;margin:0 auto;border-radius:5px;box-shadow:0 10px 35px rgba(0, 0, 0, 0.15);box-sizing:border-box;background-color:#fff;"><div style="font-size:15px;line-height:1.8em;margin:16px;">' +
-      msg +
-      "</div></div></div><br/>";
+    var html = '<div style="font-family:sans-serif;"><div style="padding:30px 20px;max-width:500px;word-wrap: break-word;margin:0 auto;border-radius:5px;box-shadow:0 10px 35px rgba(0, 0, 0, 0.15);box-sizing:border-box;background-color:#fff;"><div style="font-size:15px;line-height:1.8em;margin:16px;">' + msg + "</div></div></div><br/>";
     var element = document.createElement("div");
     element.innerHTML = html;
     document.body.appendChild(element);
   }
-  var commonError =
-    "The store cannot be loaded in your browser because of some JavaScript errors, sorry. Below here's the exact error occurred.";
-  var bodyTagError =
-    "This document doesn't contain the required " +
-    "<body> and </body> tags (see http://www.htmldog.com/reference/htmltags/body). " +
-    "Thus your Ecwid store cannot be loaded. " +
-    "Please add these tags and refresh the page. This message will disappear and you will see your store.";
+  var commonError = "The store cannot be loaded in your browser because of some JavaScript errors, sorry. Below here's the exact error occurred.";
+  var bodyTagError = "This document doesn't contain the required " + "<body> and </body> tags (see http://www.htmldog.com/reference/htmltags/body). " + "Thus your Ecwid store cannot be loaded. " + "Please add these tags and refresh the page. This message will disappear and you will see your store.";
   var isWindowsMobile2005 = /(msie 4).*(windows ce)/i.test(navigator.userAgent);
   if (!document.body && !isWindowsMobile2005) {
     console.error(bodyTagError);
@@ -3375,7 +2779,7 @@ try {
   throw e;
 }
 window.Ecwid.getAppPublicConfig = function (namespace) {
-  var publicData = { "yola-b2c-tiered": "{}", "ecwid-storefront": "{}" };
+  var publicData = { "yola-b2c-tiered": "{}", "ecwid-storefront": "{}", "ecwid-feed-creator-app": "{}" };
   var result = Ecwid._isAppEnabled(namespace) ? publicData[namespace] : null;
   return typeof result === "string" ? result : null;
   return null;

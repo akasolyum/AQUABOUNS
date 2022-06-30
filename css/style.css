@@ -14,6 +14,8 @@ body > header > .desktop { max-width: 1140px; display: -webkit-box; display: -ms
 
 body > header > .desktop > ul { display: -webkit-box; display: -ms-flexbox; display: flex; text-decoration: none; list-style: none; -ms-flex-item-align: center; align-self: center; font-weight: 400; }
 
+body > header > .desktop > ul .cart { background-image: url(/img/shopping-bag.svg); background-repeat: no-repeat; background-position: center; width: 1.5rem; height: 1.5rem; }
+
 body > header > .desktop > ul > li { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin-left: 30px; color: #fff; height: 1px; }
 
 body > header > .desktop > ul > li a:hover { color: #7eb3ff; -webkit-transition: 0.2s; transition: 0.2s; }
@@ -104,6 +106,8 @@ body > header > .desktop { max-width: 1140px; display: -webkit-box; display: -ms
 
 body > header > .desktop > ul { display: -webkit-box; display: -ms-flexbox; display: flex; text-decoration: none; list-style: none; -ms-flex-item-align: center; align-self: center; font-weight: 400; }
 
+body > header > .desktop > ul .cart { background-image: url(/img/shopping-bag.svg); background-repeat: no-repeat; background-position: center; width: 1.5rem; height: 1.5rem; }
+
 body > header > .desktop > ul > li { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin-left: 30px; color: #fff; height: 1px; }
 
 body > header > .desktop > ul > li a:hover { color: #7eb3ff; -webkit-transition: 0.2s; transition: 0.2s; }
@@ -173,9 +177,9 @@ body .reseaux { display: -webkit-box; display: -ms-flexbox; display: flex; -webk
 
 body .reseaux aside { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; background: #f3f3f3; border: 1px solid #d8d8d8; border-radius: 20px 0 0 20px; width: 45px; text-align: center; padding: 12px 6px; border-right: none; position: fixed; top: 30%; right: 0; z-index: 2; }
 
-body .reseaux aside a { color: #011235; margin: 15%; font-size: 35px; }
+body .reseaux aside a { color: #011235; -webkit-transition: 0.5s; transition: 0.5s; margin: 15%; font-size: 35px; }
 
-body .reseaux aside a:hover { -webkit-transition: all 0.2s; transition: all 0.2s; color: #7eb3ff; }
+body .reseaux aside a:hover { color: #7eb3ff; }
 
 @media screen and (max-width: 1125px) { body .reseaux { display: none; }
   body .reseaux aside { display: none; } }
@@ -186,7 +190,7 @@ body .introform article { max-width: 1140px; width: 100%; display: -webkit-box; 
 
 body .introform article h1 { -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; color: #fff; font-size: 1.5em; }
 
-body .introform article p { line-height: 1.5rem; color: #fff; font-size: 1em; margin: 0; width: 40%; }
+body .introform article p { line-height: 1.5rem; color: #fff; font-size: 1em; margin: 0; }
 
 body .introform article br { display: block; /* makes it have a width */ content: " "; /* clears default height */ margin-top: 0.5rem; /* change this to whatever height you want it */ }
 
@@ -240,7 +244,9 @@ body .contact .formcontact label { -webkit-box-ordinal-group: 0; -ms-flex-order:
 
 body .conditions { color: #d2d2d2; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: start; -webkit-box-align: center; -ms-flex-align: center; align-items: center; gap: 0.5rem; }
 
-body .conditions a { color: #d2d2d2; }
+body .conditions a { color: #d2d2d2; text-decoration: underline; -webkit-transition: all 0.2s; transition: all 0.2s; margin-left: -0.2rem; }
+
+body .conditions a:hover { color: #7eb3ff; }
 
 body .conditions input { width: 1rem; }
 
@@ -313,7 +319,7 @@ body .fonctions-new .container-list-fonctions .container-features .summary-featu
 
 body .fonctions-new .container-list-fonctions .container-features .summary-features p { margin: 1rem 0 0 0; line-height: 1.3rem; }
 
-body .fonctions-new .container-list-fonctions .container-features .summary-features a { color: #6f82a6; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: end; margin-top: 1rem; }
+body .fonctions-new .container-list-fonctions .container-features .summary-features a { color: #6f82a6; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: end; margin-top: 1rem; display: none; }
 
 body .fonctions-new .container-list-fonctions .container-features .icon-features { width: 5rem; position: absolute; top: -1.3rem; left: -2.3rem; }
 
