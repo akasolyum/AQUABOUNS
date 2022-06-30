@@ -335,6 +335,8 @@ body .boutique .intro article p { color: #fff; font-size: 1em; margin: 0; }
 
 body .boutique .intro article br { display: block; /* makes it have a width */ content: " "; /* clears default height */ }
 
+#ecwid_body .ecwid { margin: 3rem !important; }
+
 body { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
 body .legal { display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
