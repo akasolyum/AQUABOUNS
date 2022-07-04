@@ -28,7 +28,6 @@ hamburger.addEventListener("click", toggleMenu);
 //             FAQ
 
 const allCross = document.querySelectorAll(".visible-pannel img");
-console.log(allCross);
 
 allCross.forEach((Element) => {
   Element.addEventListener("click", function () {
@@ -56,7 +55,3 @@ allCross.forEach((Element) => {
     }
   });
 });
-
-const shiping = document.getElementsByClassName ("product-details-module__title ec-header-h6 details-product-purchase__place notranslate")
-
-console.log(shiping)
