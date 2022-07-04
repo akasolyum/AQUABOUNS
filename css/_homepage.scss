@@ -41,6 +41,7 @@ body {
         font-weight: 700;
       }
       p {
+
         font-weight: 400;
         width: 50%;
       }
@@ -53,7 +54,8 @@ body {
           font-size: 1.5em;
         }
         p {
-          color: $color_sec_texte;
+          color: $color_main_texte;
+          line-height: 1.5rem;
           font-size: 1em;
         }
       }
