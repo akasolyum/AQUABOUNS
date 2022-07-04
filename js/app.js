@@ -56,3 +56,7 @@ allCross.forEach((Element) => {
     }
   });
 });
+
+const shiping = document.getElementsByClassName ("product-details-module__title ec-header-h6 details-product-purchase__place notranslate")
+
+console.log(shiping)
