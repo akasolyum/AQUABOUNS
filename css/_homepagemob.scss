@@ -5,6 +5,20 @@
         article {
           align-items: center;
         }
+        &:nth-child(1) {
+          background: url(/img/fond.jpg) no-repeat;
+          background-size: cover;
+          h2 {
+            color: $color_main_texte;
+            font-size: 1.5em;
+          }
+          p {
+            width: 20rem;
+            color: $color_main_texte;
+            line-height: 1.5rem;
+            font-size: 1em;
+          }
+        }
         //DOWNLOAD
         &:nth-child(2) {
           div {
